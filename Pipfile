@@ -12,6 +12,7 @@ rich = "*"
 pandas = "*"
 sklearn = "*"
 scikit-learn = "*"
+networkx = "*"
 
 [dev-packages]
 ipykernel = "*"
