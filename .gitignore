@@ -1,6 +1,6 @@
 ###### FOR THIS PROJ
 /omit
-/dataset
+/dataset/*.csv
 ####################
 
 
