@@ -11,6 +11,7 @@ seaborn = "*"
 rich = "*"
 pandas = "*"
 sklearn = "*"
+scikit-learn = "*"
 
 [dev-packages]
 ipykernel = "*"
