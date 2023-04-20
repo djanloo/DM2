@@ -56,37 +56,57 @@ q01           -0.997091
 q05           -0.992325
 q95            0.992718
 q99            0.995863
+lag1_std       0.933399
+lag1_q01      -0.922779
 lag1_q05      -0.973875
 lag1_q95       0.974209
+lag1_q99       0.936798
 mfcc_std      -0.980794
 mfcc_min       0.972450
 mfcc_q01       0.967839
 std_w2         0.985798
 min_w2        -0.951939
+max_w2         0.940419
 q01_w2        -0.978295
 q05_w2        -0.984448
+q25_w2        -0.942801
+q75_w2         0.936098
 q95_w2         0.982479
 q99_w2         0.972840
+lag1_q05_w2   -0.904009
+lag1_q25_w2   -0.944627
+lag1_q75_w2    0.935348
+lag1_q95_w2    0.913027
+mfcc_std_w2   -0.946698
 std_w3         0.986827
 min_w3        -0.968114
 max_w3         0.959436
 q01_w3        -0.981565
 q05_w3        -0.981101
+q25_w3        -0.941156
+q75_w3         0.935021
 q95_w3         0.982794
 q99_w3         0.982578
 lag1_std_w3    0.968025
+lag1_min_w3   -0.906138
+lag1_max_w3    0.924739
 lag1_q01_w3   -0.961498
 lag1_q05_w3   -0.968912
+lag1_q25_w3   -0.935840
+lag1_q75_w3    0.930760
 lag1_q95_w3    0.970100
 lag1_q99_w3    0.966840
 mfcc_std_w3   -0.954952
 Name: std, dtype: float64
 
 	Correlated with std_w1:
-min_w1   -0.962820
-max_w1    0.958795
-q01_w1   -0.983799
-q99_w1    0.984235
+min_w1        -0.962820
+max_w1         0.958795
+q01_w1        -0.983799
+q99_w1         0.984235
+lag1_std_w1    0.941373
+lag1_q01_w1   -0.942455
+lag1_q99_w1    0.945067
 Name: std_w1, dtype: float64
 
 	Correlated with std_w2:
@@ -97,8 +117,11 @@ q01           -0.982147
 q05           -0.973479
 q95            0.974976
 q99            0.981937
+lag1_std       0.929230
+lag1_q01      -0.921291
 lag1_q05      -0.959698
 lag1_q95       0.959007
+lag1_q99       0.933445
 mfcc_std      -0.965937
 mfcc_min       0.963695
 mfcc_q01       0.958069
@@ -107,27 +130,60 @@ max_w2         0.958610
 q01_w2        -0.993260
 q05_w2        -0.996151
 q25_w2        -0.954260
+q75_w2         0.944841
 q95_w2         0.995329
 q99_w2         0.990573
+lag1_std_w2    0.905131
+lag1_q05_w2   -0.913192
 lag1_q25_w2   -0.952345
+lag1_q75_w2    0.943869
+lag1_q95_w2    0.921563
 mfcc_std_w2   -0.957527
 std_w3         0.951336
+min_w3        -0.941218
+max_w3         0.936053
+q01_w3        -0.947545
+q05_w3        -0.943506
+q25_w3        -0.905494
+q95_w3         0.946671
 q99_w3         0.950092
+lag1_std_w3    0.936678
+lag1_max_w3    0.903362
+lag1_q01_w3   -0.932343
+lag1_q05_w3   -0.934239
+lag1_q95_w3    0.933784
+lag1_q99_w3    0.935877
+mfcc_std_w3   -0.921017
 Name: std_w2, dtype: float64
 
 	Correlated with std_w3:
 std            0.986827
+min           -0.937930
+max            0.929895
 q01           -0.985389
 q05           -0.985206
 q95            0.985240
 q99            0.983676
+lag1_std       0.916189
+lag1_q01      -0.903129
 lag1_q05      -0.964564
 lag1_q95       0.965475
+lag1_q99       0.918615
 mfcc_std      -0.965597
 mfcc_min       0.953446
+mfcc_q01       0.948523
 std_w2         0.951336
+min_w2        -0.917905
+max_w2         0.904509
+q01_w2        -0.943520
 q05_w2        -0.952094
+q25_w2        -0.909669
+q75_w2         0.904262
 q95_w2         0.950175
+q99_w2         0.936884
+lag1_q25_w2   -0.917281
+lag1_q75_w2    0.907351
+mfcc_std_w2   -0.917004
 min_w3        -0.973674
 max_w3         0.962662
 q01_w3        -0.993624
@@ -137,21 +193,27 @@ q75_w3         0.950311
 q95_w3         0.997180
 q99_w3         0.993606
 lag1_std_w3    0.978146
+lag1_min_w3   -0.909280
+lag1_max_w3    0.927755
 lag1_q01_w3   -0.970214
 lag1_q05_w3   -0.982534
 lag1_q25_w3   -0.953982
+lag1_q75_w3    0.947547
 lag1_q95_w3    0.984894
 lag1_q99_w3    0.976935
 mfcc_std_w3   -0.967642
 Name: std_w3, dtype: float64
 
 	Correlated with std_w4:
-min_w4   -0.970478
-max_w4    0.971480
-q01_w4   -0.994931
-q05_w4   -0.953585
-q95_w4    0.953032
-q99_w4    0.995609
+min_w4        -0.970478
+max_w4         0.971480
+q01_w4        -0.994931
+q05_w4        -0.953585
+q95_w4         0.953032
+q99_w4         0.995609
+lag1_std_w4    0.928517
+lag1_q01_w4   -0.917820
+lag1_q99_w4    0.921322
 Name: std_w4, dtype: float64
 
 
@@ -159,42 +221,103 @@ COLUMNS STARTING WITH PREFIX min:
 
 
 	Correlated with min:
-std        -0.961377
-max        -0.984137
-q01         0.967421
-q99        -0.963349
-mfcc_std    0.954715
-mfcc_min   -0.968147
-mfcc_q01   -0.964266
-std_w2     -0.960367
-min_w2      0.988279
-max_w2     -0.970674
-q01_w2      0.972346
-q99_w2     -0.964310
-min_w3      0.966441
-max_w3     -0.957576
-q01_w3      0.950630
+std           -0.961377
+max           -0.984137
+q01            0.967421
+q05            0.929302
+q95           -0.929553
+q99           -0.963349
+lag1_std      -0.930964
+lag1_q01       0.925980
+lag1_q05       0.949172
+lag1_q95      -0.942292
+lag1_q99      -0.932471
+mfcc_std       0.954715
+mfcc_min      -0.968147
+mfcc_q01      -0.964266
+std_w2        -0.960367
+min_w2         0.988279
+max_w2        -0.970674
+q01_w2         0.972346
+q05_w2         0.946221
+q95_w2        -0.945095
+q99_w2        -0.964310
+lag1_std_w2   -0.906250
+lag1_q05_w2    0.909730
+lag1_q25_w2    0.914765
+lag1_q75_w2   -0.910368
+lag1_q95_w2   -0.912002
+mfcc_std_w2    0.935270
+std_w3        -0.937930
+min_w3         0.966441
+max_w3        -0.957576
+q01_w3         0.950630
+q05_w3         0.930253
+q95_w3        -0.927860
+q99_w3        -0.947207
+lag1_std_w3   -0.939642
+lag1_min_w3    0.916315
+lag1_max_w3   -0.933062
+lag1_q01_w3    0.943105
+lag1_q05_w3    0.932739
+lag1_q95_w3   -0.924614
+lag1_q99_w3   -0.940604
+mfcc_std_w3    0.910582
 Name: min, dtype: float64
 
 	Correlated with min_w1:
 std_w1        -0.962820
 max_w1        -0.990881
+q01_w1         0.921248
+q99_w1        -0.922273
 lag1_std_w1   -0.952717
+lag1_min_w1    0.923924
+lag1_max_w1   -0.933668
+lag1_q01_w1    0.916582
+lag1_q99_w1   -0.916870
 Name: min_w1, dtype: float64
 
 	Correlated with min_w2:
-std        -0.951939
-min         0.988279
-max        -0.975938
-q01         0.956468
-q99        -0.953233
-mfcc_min   -0.956221
-mfcc_q01   -0.952137
-std_w2     -0.966959
-max_w2     -0.981385
-q01_w2      0.980313
-q05_w2      0.950966
-q99_w2     -0.972743
+std           -0.951939
+min            0.988279
+max           -0.975938
+q01            0.956468
+q05            0.920451
+q95           -0.921023
+q99           -0.953233
+lag1_std      -0.920519
+lag1_q01       0.915745
+lag1_q05       0.937105
+lag1_q95      -0.930249
+lag1_q99      -0.922287
+mfcc_std       0.943102
+mfcc_min      -0.956221
+mfcc_q01      -0.952137
+std_w2        -0.966959
+max_w2        -0.981385
+q01_w2         0.980313
+q05_w2         0.950966
+q95_w2        -0.949812
+q99_w2        -0.972743
+lag1_std_w2   -0.900716
+lag1_q05_w2    0.906030
+lag1_q25_w2    0.913803
+lag1_q75_w2   -0.908802
+lag1_q95_w2   -0.908333
+mfcc_std_w2    0.936127
+std_w3        -0.917905
+min_w3         0.940449
+max_w3        -0.935877
+q01_w3         0.927916
+q05_w3         0.910015
+q95_w3        -0.909154
+q99_w3        -0.926616
+lag1_std_w3   -0.918604
+lag1_max_w3   -0.911787
+lag1_q01_w3    0.921791
+lag1_q05_w3    0.911508
+lag1_q95_w3   -0.903783
+lag1_q99_w3   -0.919139
 Name: min_w2, dtype: float64
 
 	Correlated with min_w3:
@@ -202,12 +325,27 @@ std           -0.968114
 min            0.966441
 max           -0.955242
 q01            0.974406
+q05            0.948977
+q95           -0.949256
 q99           -0.969561
+lag1_std      -0.926387
+lag1_q01       0.918815
 lag1_q05       0.958492
 lag1_q95      -0.954107
+lag1_q99      -0.928597
 mfcc_std       0.955351
 mfcc_min      -0.954998
 mfcc_q01      -0.951655
+std_w2        -0.941218
+min_w2         0.940449
+max_w2        -0.925927
+q01_w2         0.944364
+q05_w2         0.935331
+q95_w2        -0.934232
+q99_w2        -0.935828
+lag1_q25_w2    0.909250
+lag1_q75_w2   -0.903115
+mfcc_std_w2    0.920079
 std_w3        -0.973674
 max_w3        -0.982345
 q01_w3         0.984938
@@ -215,18 +353,26 @@ q05_w3         0.966411
 q95_w3        -0.963345
 q99_w3        -0.979321
 lag1_std_w3   -0.972401
+lag1_min_w3    0.935240
 lag1_max_w3   -0.955369
 lag1_q01_w3    0.974043
 lag1_q05_w3    0.967455
+lag1_q25_w3    0.902162
 lag1_q95_w3   -0.961575
 lag1_q99_w3   -0.973502
+mfcc_std_w3    0.943343
 Name: min_w3, dtype: float64
 
 	Correlated with min_w4:
-std_w4   -0.970478
-max_w4   -0.990371
-q01_w4    0.970081
-q99_w4   -0.966517
+std_w4        -0.970478
+max_w4        -0.990371
+q01_w4         0.970081
+q99_w4        -0.966517
+lag1_std_w4   -0.944494
+lag1_min_w4    0.925449
+lag1_max_w4   -0.939095
+lag1_q01_w4    0.935262
+lag1_q99_w4   -0.935352
 Name: min_w4, dtype: float64
 
 
@@ -234,34 +380,94 @@ COLUMNS STARTING WITH PREFIX max:
 
 
 	Correlated with max:
-std         0.954496
-min        -0.984137
-q01        -0.956685
-q99         0.961050
-mfcc_min    0.958361
-mfcc_q01    0.952573
-std_w2      0.955563
-min_w2     -0.975938
-max_w2      0.984976
-q01_w2     -0.964583
-q99_w2      0.967231
-min_w3     -0.955242
-max_w3      0.964848
+std            0.954496
+min           -0.984137
+q01           -0.956685
+q05           -0.920527
+q95            0.921926
+q99            0.961050
+lag1_std       0.923070
+lag1_q01      -0.920124
+lag1_q05      -0.942813
+lag1_q95       0.935272
+lag1_q99       0.926264
+mfcc_std      -0.943372
+mfcc_min       0.958361
+mfcc_q01       0.952573
+std_w2         0.955563
+min_w2        -0.975938
+max_w2         0.984976
+q01_w2        -0.964583
+q05_w2        -0.938315
+q95_w2         0.941865
+q99_w2         0.967231
+lag1_q05_w2   -0.902361
+lag1_q25_w2   -0.906699
+lag1_q75_w2    0.901656
+lag1_q95_w2    0.904499
+mfcc_std_w2   -0.927915
+std_w3         0.929895
+min_w3        -0.955242
+max_w3         0.964848
+q01_w3        -0.938002
+q05_w3        -0.918649
+q95_w3         0.922136
+q99_w3         0.945133
+lag1_std_w3    0.937137
+lag1_min_w3   -0.915797
+lag1_max_w3    0.932764
+lag1_q01_w3   -0.942887
+lag1_q05_w3   -0.928103
+lag1_q95_w3    0.919280
+lag1_q99_w3    0.938308
+mfcc_std_w3   -0.902200
 Name: max, dtype: float64
 
 	Correlated with max_w1:
 std_w1         0.958795
 min_w1        -0.990881
+q01_w1        -0.914337
+q99_w1         0.917582
 lag1_std_w1    0.956424
+lag1_min_w1   -0.930743
+lag1_max_w1    0.941001
+lag1_q01_w1   -0.916398
+lag1_q99_w1    0.916336
 Name: max_w1, dtype: float64
 
 	Correlated with max_w2:
-min      -0.970674
-max       0.984976
-std_w2    0.958610
-min_w2   -0.981385
-q01_w2   -0.968541
-q99_w2    0.974826
+std            0.940419
+min           -0.970674
+max            0.984976
+q01           -0.941593
+q05           -0.906147
+q95            0.908364
+q99            0.947034
+lag1_std       0.906724
+lag1_q01      -0.903785
+lag1_q05      -0.924923
+lag1_q95       0.917271
+lag1_q99       0.910031
+mfcc_std      -0.926589
+mfcc_min       0.944388
+mfcc_q01       0.938031
+std_w2         0.958610
+min_w2        -0.981385
+q01_w2        -0.968541
+q05_w2        -0.938634
+q95_w2         0.943201
+q99_w2         0.974826
+mfcc_std_w2   -0.922216
+std_w3         0.904509
+min_w3        -0.925927
+max_w3         0.932339
+q01_w3        -0.910789
+q99_w3         0.918463
+lag1_std_w3    0.909211
+lag1_max_w3    0.905547
+lag1_q01_w3   -0.914371
+lag1_q05_w3   -0.900816
+lag1_q99_w3    0.909766
 Name: max_w2, dtype: float64
 
 	Correlated with max_w3:
@@ -269,8 +475,26 @@ std            0.959436
 min           -0.957576
 max            0.964848
 q01           -0.961430
+q05           -0.937478
+q95            0.939408
 q99            0.966677
+lag1_std       0.923877
+lag1_q01      -0.917939
 lag1_q05      -0.954573
+lag1_q95       0.949206
+lag1_q99       0.926842
+mfcc_std      -0.944420
+mfcc_min       0.945791
+mfcc_q01       0.940341
+std_w2         0.936053
+min_w2        -0.935877
+max_w2         0.932339
+q01_w2        -0.936988
+q05_w2        -0.927480
+q95_w2         0.931181
+q99_w2         0.937154
+lag1_q25_w2   -0.905590
+mfcc_std_w2   -0.917319
 std_w3         0.962662
 min_w3        -0.982345
 q01_w3        -0.967906
@@ -278,18 +502,25 @@ q05_w3        -0.950278
 q95_w3         0.954474
 q99_w3         0.977219
 lag1_std_w3    0.972222
+lag1_min_w3   -0.941776
 lag1_max_w3    0.959315
 lag1_q01_w3   -0.977089
 lag1_q05_w3   -0.963208
 lag1_q95_w3    0.955811
 lag1_q99_w3    0.973616
+mfcc_std_w3   -0.933058
 Name: max_w3, dtype: float64
 
 	Correlated with max_w4:
-std_w4    0.971480
-min_w4   -0.990371
-q01_w4   -0.966573
-q99_w4    0.970444
+std_w4         0.971480
+min_w4        -0.990371
+q01_w4        -0.966573
+q99_w4         0.970444
+lag1_std_w4    0.946529
+lag1_min_w4   -0.928043
+lag1_max_w4    0.939282
+lag1_q01_w4   -0.937417
+lag1_q99_w4    0.937362
 Name: max_w4, dtype: float64
 
 
@@ -313,57 +544,136 @@ lag1_sum    0.999266
 Name: lag1_mean, dtype: float64
 
 	Correlated with lag1_std:
+std            0.933399
+min           -0.930964
+max            0.923070
+q01           -0.933895
+q05           -0.917612
+q95            0.919947
+q99            0.936207
 lag1_min      -0.951149
 lag1_max       0.952453
 lag1_q01      -0.995697
 lag1_q05      -0.973747
 lag1_q95       0.972468
 lag1_q99       0.996744
+mfcc_std      -0.934408
+mfcc_min       0.927097
+mfcc_q01       0.920545
+std_w2         0.929230
+min_w2        -0.920519
+max_w2         0.906724
+q01_w2        -0.924028
+q05_w2        -0.922599
+q95_w2         0.926130
+q99_w2         0.921737
 lag1_std_w2    0.992093
+lag1_min_w2   -0.946002
+lag1_max_w2    0.946847
 lag1_q01_w2   -0.982073
 lag1_q05_w2   -0.987203
 lag1_q25_w2   -0.961315
 lag1_q75_w2    0.962367
 lag1_q95_w2    0.988698
 lag1_q99_w2    0.988389
+mfcc_std_w2   -0.938925
+std_w3         0.916189
+min_w3        -0.926387
+max_w3         0.923877
+q01_w3        -0.921586
+q05_w3        -0.909133
+q95_w3         0.912279
+q99_w3         0.923385
+lag1_std_w3    0.937872
+lag1_min_w3   -0.930928
+lag1_max_w3    0.931257
+lag1_q01_w3   -0.938272
+lag1_q05_w3   -0.931200
+lag1_q95_w3    0.924529
+lag1_q99_w3    0.936797
+mfcc_std_w3   -0.909272
 Name: lag1_std, dtype: float64
 
 	Correlated with lag1_min:
 lag1_std      -0.951149
 lag1_max      -0.986334
+lag1_q01       0.936104
+lag1_q99      -0.932742
 lag1_std_w2   -0.960735
 lag1_min_w2    0.996460
 lag1_max_w2   -0.985353
 lag1_q01_w2    0.961132
+lag1_q05_w2    0.930353
+lag1_q95_w2   -0.929413
 lag1_q99_w2   -0.959111
 Name: lag1_min, dtype: float64
 
 	Correlated with lag1_max:
 lag1_std       0.952453
 lag1_min      -0.986334
+lag1_q01      -0.937239
+lag1_q99       0.934567
 lag1_std_w2    0.958089
 lag1_min_w2   -0.982576
 lag1_max_w2    0.994492
 lag1_q01_w2   -0.956413
+lag1_q05_w2   -0.929120
+lag1_q95_w2    0.927860
 lag1_q99_w2    0.956300
 Name: lag1_max, dtype: float64
 
 	Correlated with lag1_q01:
+std           -0.922779
+min            0.925980
+max           -0.920124
+q01            0.923741
+q05            0.904605
+q95           -0.906904
+q99           -0.927063
 lag1_std      -0.995697
+lag1_min       0.936104
+lag1_max      -0.937239
 lag1_q05       0.968586
 lag1_q95      -0.966637
 lag1_q99      -0.998279
+mfcc_std       0.923086
+mfcc_min      -0.918770
+mfcc_q01      -0.911551
+std_w2        -0.921291
+min_w2         0.915745
+max_w2        -0.903785
+q01_w2         0.916707
+q05_w2         0.913364
+q95_w2        -0.917396
+q99_w2        -0.915966
 lag1_std_w2   -0.989397
+lag1_min_w2    0.930861
+lag1_max_w2   -0.931503
 lag1_q01_w2    0.980340
 lag1_q05_w2    0.993874
 lag1_q25_w2    0.958960
 lag1_q75_w2   -0.961768
 lag1_q95_w2   -0.993466
 lag1_q99_w2   -0.986086
+mfcc_std_w2    0.935197
+std_w3        -0.903129
+min_w3         0.918815
+max_w3        -0.917939
+q01_w3         0.910274
+q99_w3        -0.913169
+lag1_std_w3   -0.927880
+lag1_min_w3    0.924523
+lag1_max_w3   -0.925215
+lag1_q01_w3    0.930706
+lag1_q05_w3    0.920366
+lag1_q95_w3   -0.912094
+lag1_q99_w3   -0.927317
 Name: lag1_q01, dtype: float64
 
 	Correlated with lag1_q05:
 std           -0.973875
+min            0.949172
+max           -0.942813
 q01            0.971932
 q05            0.964485
 q95           -0.966509
@@ -374,33 +684,58 @@ lag1_q95      -0.999044
 lag1_q99      -0.977948
 mfcc_std       0.969013
 mfcc_min      -0.953189
+mfcc_q01      -0.945544
 std_w2        -0.959698
+min_w2         0.937105
+max_w2        -0.924923
 q01_w2         0.952086
 q05_w2         0.955760
+q25_w2         0.927720
+q75_w2        -0.914151
 q95_w2        -0.959074
 q99_w2        -0.950857
+lag1_std_w2   -0.946554
+lag1_q01_w2    0.921993
 lag1_q05_w2    0.954822
 lag1_q25_w2    0.975934
 lag1_q75_w2   -0.971481
 lag1_q95_w2   -0.960939
+lag1_q99_w2   -0.936134
 mfcc_std_w2    0.956255
 std_w3        -0.964564
 min_w3         0.958492
 max_w3        -0.954573
 q01_w3         0.962954
 q05_w3         0.958404
+q25_w3         0.911628
+q75_w3        -0.901287
 q95_w3        -0.961872
 q99_w3        -0.966305
 lag1_std_w3   -0.979613
+lag1_min_w3    0.936702
+lag1_max_w3   -0.946322
 lag1_q01_w3    0.976026
 lag1_q05_w3    0.979406
+lag1_q25_w3    0.934669
+lag1_q75_w3   -0.933869
 lag1_q95_w3   -0.975930
 lag1_q99_w3   -0.978114
 mfcc_std_w3    0.956545
 Name: lag1_q05, dtype: float64
 
+	Correlated with lag1_q25:
+q25         0.927034
+lag1_q75   -0.935139
+Name: lag1_q25, dtype: float64
+
+	Correlated with lag1_q75:
+lag1_q25   -0.935139
+Name: lag1_q75, dtype: float64
+
 	Correlated with lag1_q95:
 std            0.974209
+min           -0.942292
+max            0.935272
 q01           -0.970899
 q05           -0.968279
 q95            0.969910
@@ -410,41 +745,101 @@ lag1_q01      -0.966637
 lag1_q05      -0.999044
 lag1_q99       0.976445
 mfcc_std      -0.968716
+mfcc_min       0.949731
+mfcc_q01       0.942140
 std_w2         0.959007
+min_w2        -0.930249
+max_w2         0.917271
+q01_w2        -0.948985
 q05_w2        -0.956741
+q25_w2        -0.933856
+q75_w2         0.921358
 q95_w2         0.959001
+q99_w2         0.947058
+lag1_std_w2    0.945312
+lag1_q01_w2   -0.921017
 lag1_q05_w2   -0.953235
 lag1_q25_w2   -0.977675
 lag1_q75_w2    0.972946
 lag1_q95_w2    0.960205
+lag1_q99_w2    0.934745
 mfcc_std_w2   -0.954354
 std_w3         0.965475
 min_w3        -0.954107
+max_w3         0.949206
 q01_w3        -0.961675
 q05_w3        -0.959851
+q25_w3        -0.918579
+q75_w3         0.908717
 q95_w3         0.963238
 q99_w3         0.964943
 lag1_std_w3    0.977868
+lag1_min_w3   -0.931242
+lag1_max_w3    0.940055
 lag1_q01_w3   -0.972746
 lag1_q05_w3   -0.978237
+lag1_q25_w3   -0.940823
+lag1_q75_w3    0.939277
 lag1_q95_w3    0.976682
 lag1_q99_w3    0.975947
 mfcc_std_w3   -0.956943
 Name: lag1_q95, dtype: float64
 
 	Correlated with lag1_q99:
+std            0.936798
+min           -0.932471
+max            0.926264
+q01           -0.936962
+q05           -0.921054
+q95            0.923324
+q99            0.939925
 lag1_std       0.996744
+lag1_min      -0.932742
+lag1_max       0.934567
 lag1_q01      -0.998279
 lag1_q05      -0.977948
 lag1_q95       0.976445
+mfcc_std      -0.934994
+mfcc_min       0.927907
+mfcc_q01       0.920550
+std_w2         0.933445
+min_w2        -0.922287
+max_w2         0.910031
+q01_w2        -0.927651
+q05_w2        -0.926743
+q25_w2        -0.906622
+q95_w2         0.930415
+q99_w2         0.926467
 lag1_std_w2    0.986617
+lag1_min_w2   -0.927224
+lag1_max_w2    0.928431
 lag1_q01_w2   -0.974641
 lag1_q05_w2   -0.990835
 lag1_q25_w2   -0.966841
 lag1_q75_w2    0.967276
 lag1_q95_w2    0.992527
 lag1_q99_w2    0.982487
+mfcc_std_w2   -0.941943
+std_w3         0.918615
+min_w3        -0.928597
+max_w3         0.926842
+q01_w3        -0.923671
+q05_w3        -0.911292
+q95_w3         0.914726
+q99_w3         0.926449
+lag1_std_w3    0.940651
+lag1_min_w3   -0.928607
+lag1_max_w3    0.931470
+lag1_q01_w3   -0.941284
+lag1_q05_w3   -0.934191
+lag1_q95_w3    0.927445
+lag1_q99_w3    0.940220
+mfcc_std_w3   -0.911108
 Name: lag1_q99, dtype: float64
+
+	Correlated with lag1_skew:
+lag1_skew_w2    0.903181
+Name: lag1_skew, dtype: float64
 
 	Correlated with lag1_sum_w1:
 lag1_mean_w1    0.999806
@@ -455,26 +850,44 @@ lag1_sum_w1    0.999806
 Name: lag1_mean_w1, dtype: float64
 
 	Correlated with lag1_std_w1:
+std_w1         0.941373
 min_w1        -0.952717
 max_w1         0.956424
+q01_w1        -0.910805
+q99_w1         0.912264
+lag1_min_w1   -0.944703
+lag1_max_w1    0.947911
 lag1_q01_w1   -0.970050
 lag1_q99_w1    0.968968
 Name: lag1_std_w1, dtype: float64
 
 	Correlated with lag1_min_w1:
+min_w1         0.923924
+max_w1        -0.930743
+lag1_std_w1   -0.944703
 lag1_max_w1   -0.992545
 Name: lag1_min_w1, dtype: float64
 
 	Correlated with lag1_max_w1:
+min_w1        -0.933668
+max_w1         0.941001
+lag1_std_w1    0.947911
 lag1_min_w1   -0.992545
 Name: lag1_max_w1, dtype: float64
 
 	Correlated with lag1_q01_w1:
+std_w1        -0.942455
+min_w1         0.916582
+max_w1        -0.916398
+q01_w1         0.944366
+q99_w1        -0.945235
 lag1_std_w1   -0.970050
 lag1_q99_w1   -0.998943
 Name: lag1_q01_w1, dtype: float64
 
 	Correlated with lag1_q05_w1:
+q05_w1         0.949266
+q95_w1        -0.944097
 lag1_q95_w1   -0.994144
 Name: lag1_q05_w1, dtype: float64
 
@@ -487,10 +900,17 @@ lag1_q25_w1   -0.969336
 Name: lag1_q75_w1, dtype: float64
 
 	Correlated with lag1_q95_w1:
+q05_w1        -0.942371
+q95_w1         0.940055
 lag1_q05_w1   -0.994144
 Name: lag1_q95_w1, dtype: float64
 
 	Correlated with lag1_q99_w1:
+std_w1         0.945067
+min_w1        -0.916870
+max_w1         0.916336
+q01_w1        -0.948106
+q99_w1         0.948760
 lag1_std_w1    0.968968
 lag1_q01_w1   -0.998943
 Name: lag1_q99_w1, dtype: float64
@@ -504,11 +924,21 @@ lag1_sum_w2    0.998538
 Name: lag1_mean_w2, dtype: float64
 
 	Correlated with lag1_std_w2:
+min           -0.906250
+q01           -0.900183
+q99            0.901993
 lag1_std       0.992093
 lag1_min      -0.960735
 lag1_max       0.958089
 lag1_q01      -0.989397
+lag1_q05      -0.946554
+lag1_q95       0.945312
 lag1_q99       0.986617
+mfcc_std      -0.902171
+std_w2         0.905131
+min_w2        -0.900716
+q01_w2        -0.900669
+q95_w2         0.901232
 lag1_min_w2   -0.959513
 lag1_max_w2    0.958068
 lag1_q01_w2   -0.996085
@@ -517,23 +947,35 @@ lag1_q25_w2   -0.950273
 lag1_q75_w2    0.954322
 lag1_q95_w2    0.991346
 lag1_q99_w2    0.998297
+mfcc_std_w2   -0.923685
+lag1_min_w3   -0.901292
 Name: lag1_std_w2, dtype: float64
 
 	Correlated with lag1_min_w2:
+lag1_std      -0.946002
 lag1_min       0.996460
 lag1_max      -0.982576
+lag1_q01       0.930861
+lag1_q99      -0.927224
 lag1_std_w2   -0.959513
 lag1_max_w2   -0.987384
 lag1_q01_w2    0.960862
+lag1_q05_w2    0.928018
+lag1_q95_w2   -0.927095
 lag1_q99_w2   -0.958108
 Name: lag1_min_w2, dtype: float64
 
 	Correlated with lag1_max_w2:
+lag1_std       0.946847
 lag1_min      -0.985353
 lag1_max       0.994492
+lag1_q01      -0.931503
+lag1_q99       0.928431
 lag1_std_w2    0.958068
 lag1_min_w2   -0.987384
 lag1_q01_w2   -0.957739
+lag1_q05_w2   -0.927652
+lag1_q95_w2    0.926298
 lag1_q99_w2    0.956477
 Name: lag1_max_w2, dtype: float64
 
@@ -542,71 +984,179 @@ lag1_std      -0.982073
 lag1_min       0.961132
 lag1_max      -0.956413
 lag1_q01       0.980340
+lag1_q05       0.921993
+lag1_q95      -0.921017
 lag1_q99      -0.974641
 lag1_std_w2   -0.996085
 lag1_min_w2    0.960862
 lag1_max_w2   -0.957739
 lag1_q05_w2    0.983505
+lag1_q25_w2    0.926760
+lag1_q75_w2   -0.933092
 lag1_q95_w2   -0.981638
 lag1_q99_w2   -0.997814
 Name: lag1_q01_w2, dtype: float64
 
 	Correlated with lag1_q05_w2:
+std           -0.904009
+min            0.909730
+max           -0.902361
+q01            0.904688
+q99           -0.908127
 lag1_std      -0.987203
+lag1_min       0.930353
+lag1_max      -0.929120
 lag1_q01       0.993874
 lag1_q05       0.954822
 lag1_q95      -0.953235
 lag1_q99      -0.990835
+mfcc_std       0.904608
+mfcc_min      -0.902514
+std_w2        -0.913192
+min_w2         0.906030
+q01_w2         0.907787
+q05_w2         0.905192
+q95_w2        -0.909750
+q99_w2        -0.907666
 lag1_std_w2   -0.991679
+lag1_min_w2    0.928018
+lag1_max_w2   -0.927652
 lag1_q01_w2    0.983505
 lag1_q25_w2    0.961976
 lag1_q75_w2   -0.966288
 lag1_q95_w2   -0.998866
 lag1_q99_w2   -0.988154
+mfcc_std_w2    0.931927
 Name: lag1_q05_w2, dtype: float64
 
 	Correlated with lag1_q25_w2:
+std           -0.944627
+min            0.914765
+max           -0.906699
+q01            0.939751
+q05            0.939314
+q95           -0.941885
+q99           -0.941708
 lag1_std      -0.961315
 lag1_q01       0.958960
 lag1_q05       0.975934
 lag1_q95      -0.977675
 lag1_q99      -0.966841
+mfcc_std       0.941147
+mfcc_min      -0.919741
+mfcc_q01      -0.912029
 std_w2        -0.952345
+min_w2         0.913803
+q01_w2         0.937914
 q05_w2         0.952001
 q25_w2         0.953665
+q75_w2        -0.939843
 q95_w2        -0.954598
+q99_w2        -0.935792
 lag1_std_w2   -0.950273
+lag1_q01_w2    0.926760
 lag1_q05_w2    0.961976
 lag1_q75_w2   -0.997945
 lag1_q95_w2   -0.969393
+lag1_q99_w2   -0.938706
 mfcc_std_w2    0.967940
+mfcc_q01_w2   -0.915020
+std_w3        -0.917281
+min_w3         0.909250
+max_w3        -0.905590
+q01_w3         0.913917
+q05_w3         0.910225
+q95_w3        -0.914620
+q99_w3        -0.917095
+lag1_std_w3   -0.928433
+lag1_q01_w3    0.923732
+lag1_q05_w3    0.925997
+lag1_q95_w3   -0.923803
+lag1_q99_w3   -0.926973
+mfcc_std_w3    0.912072
 Name: lag1_q25_w2, dtype: float64
 
 	Correlated with lag1_q75_w2:
+std            0.935348
+min           -0.910368
+max            0.901656
+q01           -0.931152
+q05           -0.928684
+q95            0.931370
+q99            0.932770
 lag1_std       0.962367
 lag1_q01      -0.961768
 lag1_q05      -0.971481
 lag1_q95       0.972946
 lag1_q99       0.967276
+mfcc_std      -0.934710
+mfcc_min       0.914330
+mfcc_q01       0.906639
+std_w2         0.943869
+min_w2        -0.908802
+q01_w2        -0.929895
+q05_w2        -0.942589
+q25_w2        -0.947789
+q75_w2         0.933788
+q95_w2         0.945402
+q99_w2         0.927463
 lag1_std_w2    0.954322
+lag1_q01_w2   -0.933092
 lag1_q05_w2   -0.966288
 lag1_q25_w2   -0.997945
 lag1_q95_w2    0.971907
+lag1_q99_w2    0.942742
 mfcc_std_w2   -0.967620
+mfcc_q01_w2    0.918538
+std_w3         0.907351
+min_w3        -0.903115
+q01_w3        -0.905706
+q05_w3        -0.900351
+q95_w3         0.904406
+q99_w3         0.908151
+lag1_std_w3    0.920266
+lag1_q01_w3   -0.916898
+lag1_q05_w3   -0.917556
+lag1_q95_w3    0.914144
+lag1_q99_w3    0.918828
+mfcc_std_w3   -0.903548
 Name: lag1_q75_w2, dtype: float64
 
 	Correlated with lag1_q95_w2:
+std            0.913027
+min           -0.912002
+max            0.904499
+q01           -0.912637
+q99            0.916015
 lag1_std       0.988698
+lag1_min      -0.929413
+lag1_max       0.927860
 lag1_q01      -0.993466
 lag1_q05      -0.960939
 lag1_q95       0.960205
 lag1_q99       0.992527
+mfcc_std      -0.912072
+mfcc_min       0.907260
+std_w2         0.921563
+min_w2        -0.908333
+q01_w2        -0.914242
+q05_w2        -0.915029
+q25_w2        -0.904878
+q95_w2         0.919131
+q99_w2         0.913962
 lag1_std_w2    0.991346
+lag1_min_w2   -0.927095
+lag1_max_w2    0.926298
 lag1_q01_w2   -0.981638
 lag1_q05_w2   -0.998866
 lag1_q25_w2   -0.969393
 lag1_q75_w2    0.971907
 lag1_q99_w2    0.987054
+mfcc_std_w2   -0.937318
+lag1_std_w3    0.905157
+lag1_max_w3    0.900153
+lag1_q01_w3   -0.905862
+lag1_q99_w3    0.904336
 Name: lag1_q95_w2, dtype: float64
 
 	Correlated with lag1_q99_w2:
@@ -614,14 +1164,23 @@ lag1_std       0.988389
 lag1_min      -0.959111
 lag1_max       0.956300
 lag1_q01      -0.986086
+lag1_q05      -0.936134
+lag1_q95       0.934745
 lag1_q99       0.982487
 lag1_std_w2    0.998297
 lag1_min_w2   -0.958108
 lag1_max_w2    0.956477
 lag1_q01_w2   -0.997814
 lag1_q05_w2   -0.988154
+lag1_q25_w2   -0.938706
+lag1_q75_w2    0.942742
 lag1_q95_w2    0.987054
+mfcc_std_w2   -0.913196
 Name: lag1_q99_w2, dtype: float64
+
+	Correlated with lag1_skew_w2:
+lag1_skew    0.903181
+Name: lag1_skew_w2, dtype: float64
 
 	Correlated with lag1_sum_w3:
 lag1_mean_w3    0.998572
@@ -633,18 +1192,38 @@ Name: lag1_mean_w3, dtype: float64
 
 	Correlated with lag1_std_w3:
 std            0.968025
+min           -0.939642
+max            0.937137
 q01           -0.967060
 q05           -0.959321
 q95            0.960711
 q99            0.969884
+lag1_std       0.937872
+lag1_q01      -0.927880
 lag1_q05      -0.979613
 lag1_q95       0.977868
+lag1_q99       0.940651
 mfcc_std      -0.958755
+mfcc_min       0.941610
+mfcc_q01       0.934844
+std_w2         0.936678
+min_w2        -0.918604
+max_w2         0.909211
+q01_w2        -0.931765
+q05_w2        -0.932892
+q95_w2         0.935529
+q99_w2         0.929671
+lag1_q25_w2   -0.928433
+lag1_q75_w2    0.920266
+lag1_q95_w2    0.905157
+mfcc_std_w2   -0.921971
 std_w3         0.978146
 min_w3        -0.972401
 max_w3         0.972222
 q01_w3        -0.975954
 q05_w3        -0.971451
+q25_w3        -0.924257
+q75_w3         0.915036
 q95_w3         0.973697
 q99_w3         0.980168
 lag1_min_w3   -0.954200
@@ -652,46 +1231,122 @@ lag1_max_w3    0.966712
 lag1_q01_w3   -0.997038
 lag1_q05_w3   -0.996045
 lag1_q25_w3   -0.951643
+lag1_q75_w3    0.949497
 lag1_q95_w3    0.993430
 lag1_q99_w3    0.998621
 mfcc_std_w3   -0.969002
 Name: lag1_std_w3, dtype: float64
 
 	Correlated with lag1_min_w3:
+std           -0.906138
+min            0.916315
+max           -0.915797
+q01            0.911173
+q99           -0.914592
+lag1_std      -0.930928
+lag1_q01       0.924523
+lag1_q05       0.936702
+lag1_q95      -0.931242
+lag1_q99      -0.928607
+mfcc_std       0.908010
+mfcc_min      -0.901979
+lag1_std_w2   -0.901292
+std_w3        -0.909280
+min_w3         0.935240
+max_w3        -0.941776
+q01_w3         0.918584
+q05_w3         0.900178
+q95_w3        -0.902627
+q99_w3        -0.922144
 lag1_std_w3   -0.954200
 lag1_max_w3   -0.980869
 lag1_q01_w3    0.958058
+lag1_q05_w3    0.936010
+lag1_q95_w3   -0.927188
 lag1_q99_w3   -0.951795
+mfcc_std_w3    0.905108
 Name: lag1_min_w3, dtype: float64
 
 	Correlated with lag1_max_w3:
+std            0.924739
+min           -0.933062
+max            0.932764
+q01           -0.929701
+q05           -0.901799
+q95            0.904438
+q99            0.932498
+lag1_std       0.931257
+lag1_q01      -0.925215
+lag1_q05      -0.946322
+lag1_q95       0.940055
+lag1_q99       0.931470
+mfcc_std      -0.921759
+mfcc_min       0.916791
+mfcc_q01       0.911569
+std_w2         0.903362
+min_w2        -0.911787
+max_w2         0.905547
+q01_w2        -0.906816
+q99_w2         0.905789
+lag1_q95_w2    0.900153
+mfcc_std_w2   -0.905989
+std_w3         0.927755
 min_w3        -0.955369
 max_w3         0.959315
+q01_w3        -0.936991
+q05_w3        -0.918094
+q95_w3         0.920196
+q99_w3         0.939978
 lag1_std_w3    0.966712
 lag1_min_w3   -0.980869
 lag1_q01_w3   -0.969758
+lag1_q05_w3   -0.948999
+lag1_q95_w3    0.939727
 lag1_q99_w3    0.964148
+mfcc_std_w3   -0.922007
 Name: lag1_max_w3, dtype: float64
 
 	Correlated with lag1_q01_w3:
 std           -0.961498
+min            0.943105
+max           -0.942887
 q01            0.961683
+q05            0.948437
 q95           -0.950117
 q99           -0.965619
+lag1_std      -0.938272
+lag1_q01       0.930706
 lag1_q05       0.976026
 lag1_q95      -0.972746
+lag1_q99      -0.941284
 mfcc_std       0.953692
+mfcc_min      -0.940367
+mfcc_q01      -0.933617
+std_w2        -0.932343
+min_w2         0.921791
+max_w2        -0.914371
+q01_w2         0.930086
+q05_w2         0.926469
+q95_w2        -0.930049
+q99_w2        -0.929064
+lag1_q25_w2    0.923732
+lag1_q75_w2   -0.916898
+lag1_q95_w2   -0.905862
+mfcc_std_w2    0.921786
 std_w3        -0.970214
 min_w3         0.974043
 max_w3        -0.977089
 q01_w3         0.971044
 q05_w3         0.961987
+q25_w3         0.908265
 q95_w3        -0.964600
 q99_w3        -0.976723
 lag1_std_w3   -0.997038
 lag1_min_w3    0.958058
 lag1_max_w3   -0.969758
 lag1_q05_w3    0.991319
+lag1_q25_w3    0.934885
+lag1_q75_w3   -0.934580
 lag1_q95_w3   -0.986081
 lag1_q99_w3   -0.997363
 mfcc_std_w3    0.960916
@@ -699,21 +1354,42 @@ Name: lag1_q01_w3, dtype: float64
 
 	Correlated with lag1_q05_w3:
 std           -0.968912
+min            0.932739
+max           -0.928103
 q01            0.967383
 q05            0.963654
 q95           -0.965099
 q99           -0.970182
+lag1_std      -0.931200
+lag1_q01       0.920366
 lag1_q05       0.979406
 lag1_q95      -0.978237
+lag1_q99      -0.934191
 mfcc_std       0.959423
+mfcc_min      -0.941287
+mfcc_q01      -0.933888
+std_w2        -0.934239
+min_w2         0.911508
+max_w2        -0.900816
+q01_w2         0.928024
+q05_w2         0.931484
+q95_w2        -0.934072
+q99_w2        -0.925733
+lag1_q25_w2    0.925997
+lag1_q75_w2   -0.917556
+mfcc_std_w2    0.916900
 std_w3        -0.982534
 min_w3         0.967455
 max_w3        -0.963208
 q01_w3         0.978278
 q05_w3         0.977902
+q25_w3         0.934178
+q75_w3        -0.925722
 q95_w3        -0.980450
 q99_w3        -0.981932
 lag1_std_w3   -0.996045
+lag1_min_w3    0.936010
+lag1_max_w3   -0.948999
 lag1_q01_w3    0.991319
 lag1_q25_w3    0.961445
 lag1_q75_w3   -0.959515
@@ -723,70 +1399,139 @@ mfcc_std_w3    0.973858
 Name: lag1_q05_w3, dtype: float64
 
 	Correlated with lag1_q25_w3:
+std           -0.935840
+q01            0.926532
 q05            0.951991
 q95           -0.951967
+q99           -0.925670
+lag1_q05       0.934669
+lag1_q95      -0.940823
+mfcc_std       0.929469
+q05_w2         0.900410
 std_w3        -0.953982
+min_w3         0.902162
+q01_w3         0.933058
 q05_w3         0.953667
 q25_w3         0.968394
 q75_w3        -0.967050
 q95_w3        -0.954625
+q99_w3        -0.934415
 lag1_std_w3   -0.951643
+lag1_q01_w3    0.934885
 lag1_q05_w3    0.961445
 lag1_q75_w3   -0.996668
 lag1_q95_w3   -0.971076
+lag1_q99_w3   -0.946425
 mfcc_std_w3    0.968062
 mfcc_q01_w3   -0.950724
 Name: lag1_q25_w3, dtype: float64
 
 	Correlated with lag1_q75_w3:
+std            0.930760
+q01           -0.920811
+q05           -0.945341
+q95            0.946072
+q99            0.921329
+lag1_q05      -0.933869
+lag1_q95       0.939277
+mfcc_std      -0.929496
+std_w3         0.947547
+q01_w3        -0.926606
+q05_w3        -0.945415
 q25_w3        -0.965261
 q75_w3         0.962277
+q95_w3         0.947696
+q99_w3         0.929085
+lag1_std_w3    0.949497
+lag1_q01_w3   -0.934580
 lag1_q05_w3   -0.959515
 lag1_q25_w3   -0.996668
 lag1_q95_w3    0.967080
+lag1_q99_w3    0.943326
 mfcc_std_w3   -0.969342
 mfcc_q01_w3    0.955334
 Name: lag1_q75_w3, dtype: float64
 
 	Correlated with lag1_q95_w3:
 std            0.970100
+min           -0.924614
+max            0.919280
 q01           -0.967236
 q05           -0.969215
 q95            0.969855
 q99            0.968962
+lag1_std       0.924529
+lag1_q01      -0.912094
 lag1_q05      -0.975930
 lag1_q95       0.976682
+lag1_q99       0.927445
 mfcc_std      -0.958436
+mfcc_min       0.937255
+mfcc_q01       0.929912
+std_w2         0.933784
+min_w2        -0.903783
+q01_w2        -0.925377
+q05_w2        -0.933034
+q95_w2         0.934139
+q99_w2         0.921907
+lag1_q25_w2   -0.923803
+lag1_q75_w2    0.914144
+mfcc_std_w2   -0.911891
 std_w3         0.984894
 min_w3        -0.961575
 max_w3         0.955811
 q01_w3        -0.977426
 q05_w3        -0.981717
+q25_w3        -0.944672
+q75_w3         0.937620
 q95_w3         0.983454
 q99_w3         0.980569
 lag1_std_w3    0.993430
+lag1_min_w3   -0.927188
+lag1_max_w3    0.939727
 lag1_q01_w3   -0.986081
 lag1_q05_w3   -0.998180
 lag1_q25_w3   -0.971076
 lag1_q75_w3    0.967080
 lag1_q99_w3    0.991721
 mfcc_std_w3   -0.975217
+mfcc_q01_w3    0.906475
 Name: lag1_q95_w3, dtype: float64
 
 	Correlated with lag1_q99_w3:
 std            0.966840
+min           -0.940604
+max            0.938308
 q01           -0.966458
 q05           -0.957106
 q95            0.958341
 q99            0.969061
+lag1_std       0.936797
+lag1_q01      -0.927317
 lag1_q05      -0.978114
 lag1_q95       0.975947
+lag1_q99       0.940220
 mfcc_std      -0.957114
+mfcc_min       0.941480
+mfcc_q01       0.934643
+std_w2         0.935877
+min_w2        -0.919139
+max_w2         0.909766
+q01_w2        -0.931879
+q05_w2        -0.931641
+q95_w2         0.934236
+q99_w2         0.929583
+lag1_q25_w2   -0.926973
+lag1_q75_w2    0.918828
+lag1_q95_w2    0.904336
+mfcc_std_w2   -0.920707
 std_w3         0.976935
 min_w3        -0.973502
 max_w3         0.973616
 q01_w3        -0.976210
 q05_w3        -0.970179
+q25_w3        -0.919782
+q75_w3         0.910888
 q95_w3         0.971872
 q99_w3         0.980169
 lag1_std_w3    0.998621
@@ -794,6 +1539,8 @@ lag1_min_w3   -0.951795
 lag1_max_w3    0.964148
 lag1_q01_w3   -0.997363
 lag1_q05_w3   -0.994964
+lag1_q25_w3   -0.946425
+lag1_q75_w3    0.943326
 lag1_q95_w3    0.991721
 mfcc_std_w3   -0.966253
 Name: lag1_q99_w3, dtype: float64
@@ -807,18 +1554,31 @@ lag1_sum_w4    0.999724
 Name: lag1_mean_w4, dtype: float64
 
 	Correlated with lag1_std_w4:
+std_w4         0.928517
+min_w4        -0.944494
+max_w4         0.946529
+q01_w4        -0.926911
+q99_w4         0.925299
 lag1_min_w4   -0.961320
 lag1_max_w4    0.966026
 lag1_q01_w4   -0.988658
+lag1_q05_w4   -0.934921
+lag1_q95_w4    0.923272
 lag1_q99_w4    0.988166
 Name: lag1_std_w4, dtype: float64
 
 	Correlated with lag1_min_w4:
+min_w4         0.925449
+max_w4        -0.928043
 lag1_std_w4   -0.961320
 lag1_max_w4   -0.991602
+lag1_q01_w4    0.948930
+lag1_q99_w4   -0.944708
 Name: lag1_min_w4, dtype: float64
 
 	Correlated with lag1_max_w4:
+min_w4        -0.939095
+max_w4         0.939282
 lag1_std_w4    0.966026
 lag1_min_w4   -0.991602
 lag1_q01_w4   -0.954031
@@ -826,23 +1586,53 @@ lag1_q99_w4    0.950759
 Name: lag1_max_w4, dtype: float64
 
 	Correlated with lag1_q01_w4:
+std_w4        -0.917820
+min_w4         0.935262
+max_w4        -0.937417
+q01_w4         0.920826
+q99_w4        -0.919292
 lag1_std_w4   -0.988658
+lag1_min_w4    0.948930
 lag1_max_w4   -0.954031
+lag1_q05_w4    0.938711
+lag1_q95_w4   -0.926607
 lag1_q99_w4   -0.996985
 Name: lag1_q01_w4, dtype: float64
 
 	Correlated with lag1_q05_w4:
+lag1_std_w4   -0.934921
+lag1_q01_w4    0.938711
 lag1_q95_w4   -0.991112
+lag1_q99_w4   -0.942593
 Name: lag1_q05_w4, dtype: float64
 
+	Correlated with lag1_q25_w4:
+lag1_q75_w4   -0.948045
+Name: lag1_q25_w4, dtype: float64
+
+	Correlated with lag1_q75_w4:
+lag1_q25_w4   -0.948045
+Name: lag1_q75_w4, dtype: float64
+
 	Correlated with lag1_q95_w4:
+lag1_std_w4    0.923272
+lag1_q01_w4   -0.926607
 lag1_q05_w4   -0.991112
+lag1_q99_w4    0.929701
 Name: lag1_q95_w4, dtype: float64
 
 	Correlated with lag1_q99_w4:
+std_w4         0.921322
+min_w4        -0.935352
+max_w4         0.937362
+q01_w4        -0.924944
+q99_w4         0.922780
 lag1_std_w4    0.988166
+lag1_min_w4   -0.944708
 lag1_max_w4    0.950759
 lag1_q01_w4   -0.996985
+lag1_q05_w4   -0.942593
+lag1_q95_w4    0.929701
 Name: lag1_q99_w4, dtype: float64
 
 
@@ -932,197 +1722,510 @@ zc_std_w2    -1.0
 zc_kur_w2     1.0
 Name: zc_skew_w2, dtype: float64
 
+	Correlated with zc_sum_w3:
+zc_mean_w3    0.913523
+zc_std_w3     0.913523
+zc_kur_w3    -0.913522
+zc_skew_w3   -0.913523
+Name: zc_sum_w3, dtype: float64
+
 	Correlated with zc_mean_w3:
-zc_std_w3     1.0
-zc_kur_w3    -1.0
-zc_skew_w3   -1.0
+zc_sum_w3     0.913523
+zc_std_w3     1.000000
+zc_kur_w3    -1.000000
+zc_skew_w3   -1.000000
 Name: zc_mean_w3, dtype: float64
 
 	Correlated with zc_std_w3:
-zc_mean_w3    1.0
-zc_kur_w3    -1.0
-zc_skew_w3   -1.0
+zc_sum_w3     0.913523
+zc_mean_w3    1.000000
+zc_kur_w3    -1.000000
+zc_skew_w3   -1.000000
 Name: zc_std_w3, dtype: float64
 
 	Correlated with zc_kur_w3:
-zc_mean_w3   -1.0
-zc_std_w3    -1.0
-zc_skew_w3    1.0
+zc_sum_w3    -0.913522
+zc_mean_w3   -1.000000
+zc_std_w3    -1.000000
+zc_skew_w3    1.000000
 Name: zc_kur_w3, dtype: float64
 
 	Correlated with zc_skew_w3:
-zc_mean_w3   -1.0
-zc_std_w3    -1.0
-zc_kur_w3     1.0
+zc_sum_w3    -0.913523
+zc_mean_w3   -1.000000
+zc_std_w3    -1.000000
+zc_kur_w3     1.000000
 Name: zc_skew_w3, dtype: float64
 
+	Correlated with zc_sum_w4:
+zc_mean_w4    0.949648
+zc_std_w4     0.949648
+zc_kur_w4    -0.949648
+zc_skew_w4   -0.949648
+Name: zc_sum_w4, dtype: float64
+
 	Correlated with zc_mean_w4:
-zc_std_w4     1.0
-zc_kur_w4    -1.0
-zc_skew_w4   -1.0
+zc_sum_w4     0.949648
+zc_std_w4     1.000000
+zc_kur_w4    -1.000000
+zc_skew_w4   -1.000000
 Name: zc_mean_w4, dtype: float64
 
 	Correlated with zc_std_w4:
-zc_mean_w4    1.0
-zc_kur_w4    -1.0
-zc_skew_w4   -1.0
+zc_sum_w4     0.949648
+zc_mean_w4    1.000000
+zc_kur_w4    -1.000000
+zc_skew_w4   -1.000000
 Name: zc_std_w4, dtype: float64
 
 	Correlated with zc_kur_w4:
-zc_mean_w4   -1.0
-zc_std_w4    -1.0
-zc_skew_w4    1.0
+zc_sum_w4    -0.949648
+zc_mean_w4   -1.000000
+zc_std_w4    -1.000000
+zc_skew_w4    1.000000
 Name: zc_kur_w4, dtype: float64
 
 	Correlated with zc_skew_w4:
-zc_mean_w4   -1.0
-zc_std_w4    -1.0
-zc_kur_w4     1.0
+zc_sum_w4    -0.949648
+zc_mean_w4   -1.000000
+zc_std_w4    -1.000000
+zc_kur_w4     1.000000
 Name: zc_skew_w4, dtype: float64
 
 
 COLUMNS STARTING WITH PREFIX mfcc:
 
 
+	Correlated with mfcc_sum:
+mfcc_sum_w2    0.933690
+mfcc_sum_w3    0.919311
+Name: mfcc_sum, dtype: float64
+
+	Correlated with mfcc_mean:
+mfcc_mean_w2    0.920091
+Name: mfcc_mean, dtype: float64
+
 	Correlated with mfcc_std:
 std           -0.980794
 min            0.954715
+max           -0.943372
 q01            0.979294
 q05            0.969304
 q95           -0.969932
 q99           -0.976912
+lag1_std      -0.934408
+lag1_q01       0.923086
 lag1_q05       0.969013
 lag1_q95      -0.968716
+lag1_q99      -0.934994
 mfcc_min      -0.977952
 mfcc_q01      -0.981780
 std_w2        -0.965937
+min_w2         0.943102
+max_w2        -0.926589
 q01_w2         0.962349
 q05_w2         0.962127
+q25_w2         0.922124
+q75_w2        -0.914801
 q95_w2        -0.961503
 q99_w2        -0.955074
+lag1_std_w2   -0.902171
+lag1_q05_w2    0.904608
+lag1_q25_w2    0.941147
+lag1_q75_w2   -0.934710
+lag1_q95_w2   -0.912072
 mfcc_std_w2    0.956140
 std_w3        -0.965597
 min_w3         0.955351
+max_w3        -0.944420
 q01_w3         0.964158
 q05_w3         0.959360
+q25_w3         0.921096
+q75_w3        -0.917520
 q95_w3        -0.959824
 q99_w3        -0.962394
 lag1_std_w3   -0.958755
+lag1_min_w3    0.908010
+lag1_max_w3   -0.921759
 lag1_q01_w3    0.953692
 lag1_q05_w3    0.959423
+lag1_q25_w3    0.929469
+lag1_q75_w3   -0.929496
 lag1_q95_w3   -0.958436
 lag1_q99_w3   -0.957114
 mfcc_std_w3    0.959174
 Name: mfcc_std, dtype: float64
 
 	Correlated with mfcc_min:
-std         0.972450
-min        -0.968147
-max         0.958361
-q01        -0.975147
-q95         0.951035
-q99         0.975985
-lag1_q05   -0.953189
-mfcc_std   -0.977952
-mfcc_q01    0.992332
-std_w2      0.963695
-min_w2     -0.956221
-q01_w2     -0.966601
-q05_w2     -0.954370
-q95_w2      0.957058
-q99_w2      0.964350
-std_w3      0.953446
-min_w3     -0.954998
-q01_w3     -0.957537
-q99_w3      0.958417
+std            0.972450
+min           -0.968147
+max            0.958361
+q01           -0.975147
+q05           -0.948659
+q95            0.951035
+q99            0.975985
+lag1_std       0.927097
+lag1_q01      -0.918770
+lag1_q05      -0.953189
+lag1_q95       0.949731
+lag1_q99       0.927907
+mfcc_std      -0.977952
+mfcc_q01       0.992332
+std_w2         0.963695
+min_w2        -0.956221
+max_w2         0.944388
+q01_w2        -0.966601
+q05_w2        -0.954370
+q95_w2         0.957058
+q99_w2         0.964350
+lag1_q05_w2   -0.902514
+lag1_q25_w2   -0.919741
+lag1_q75_w2    0.914330
+lag1_q95_w2    0.907260
+mfcc_std_w2   -0.932928
+std_w3         0.953446
+min_w3        -0.954998
+max_w3         0.945791
+q01_w3        -0.957537
+q05_w3        -0.946287
+q95_w3         0.948572
+q99_w3         0.958417
+lag1_std_w3    0.941610
+lag1_min_w3   -0.901979
+lag1_max_w3    0.916791
+lag1_q01_w3   -0.940367
+lag1_q05_w3   -0.941287
+lag1_q95_w3    0.937255
+lag1_q99_w3    0.941480
+mfcc_std_w3   -0.922982
 Name: mfcc_min, dtype: float64
 
+	Correlated with mfcc_max:
+mfcc_max_w3    0.92064
+Name: mfcc_max, dtype: float64
+
 	Correlated with mfcc_q01:
-std         0.967839
-min        -0.964266
-max         0.952573
-q01        -0.971505
-q99         0.969173
-mfcc_std   -0.981780
-mfcc_min    0.992332
-std_w2      0.958069
-min_w2     -0.952137
-q01_w2     -0.962449
-q99_w2      0.956355
-min_w3     -0.951655
-q01_w3     -0.954070
-q99_w3      0.952084
+std            0.967839
+min           -0.964266
+max            0.952573
+q01           -0.971505
+q05           -0.945079
+q95            0.945721
+q99            0.969173
+lag1_std       0.920545
+lag1_q01      -0.911551
+lag1_q05      -0.945544
+lag1_q95       0.942140
+lag1_q99       0.920550
+mfcc_std      -0.981780
+mfcc_min       0.992332
+std_w2         0.958069
+min_w2        -0.952137
+max_w2         0.938031
+q01_w2        -0.962449
+q05_w2        -0.949931
+q95_w2         0.949672
+q99_w2         0.956355
+lag1_q25_w2   -0.912029
+lag1_q75_w2    0.906639
+mfcc_std_w2   -0.930852
+std_w3         0.948523
+min_w3        -0.951655
+max_w3         0.940341
+q01_w3        -0.954070
+q05_w3        -0.942216
+q95_w3         0.941939
+q99_w3         0.952084
+lag1_std_w3    0.934844
+lag1_max_w3    0.911569
+lag1_q01_w3   -0.933617
+lag1_q05_w3   -0.933888
+lag1_q95_w3    0.929912
+lag1_q99_w3    0.934643
+mfcc_std_w3   -0.920513
 Name: mfcc_q01, dtype: float64
 
+	Correlated with mfcc_q05:
+mfcc_q05_w2    0.91835
+Name: mfcc_q05, dtype: float64
+
+	Correlated with mfcc_q25:
+mfcc_q25_w2    0.902841
+mfcc_q25_w3    0.906642
+mfcc_q50_w3    0.906028
+Name: mfcc_q25, dtype: float64
+
+	Correlated with mfcc_q99:
+mfcc_q99_w2    0.919869
+Name: mfcc_q99, dtype: float64
+
+	Correlated with mfcc_std_w1:
+mfcc_min_w1   -0.918603
+mfcc_q01_w1   -0.945447
+Name: mfcc_std_w1, dtype: float64
+
 	Correlated with mfcc_min_w1:
+mfcc_std_w1   -0.918603
 mfcc_q01_w1    0.959056
 Name: mfcc_min_w1, dtype: float64
 
 	Correlated with mfcc_q01_w1:
+mfcc_std_w1   -0.945447
 mfcc_min_w1    0.959056
 Name: mfcc_q01_w1, dtype: float64
 
+	Correlated with mfcc_kur_w1:
+mfcc_skew_w1   -0.926039
+Name: mfcc_kur_w1, dtype: float64
+
+	Correlated with mfcc_skew_w1:
+mfcc_kur_w1   -0.926039
+Name: mfcc_skew_w1, dtype: float64
+
+	Correlated with mfcc_sum_w2:
+mfcc_sum       0.933690
+mfcc_sum_w3    0.918869
+Name: mfcc_sum_w2, dtype: float64
+
+	Correlated with mfcc_mean_w2:
+mfcc_mean    0.920091
+Name: mfcc_mean_w2, dtype: float64
+
 	Correlated with mfcc_std_w2:
+std           -0.946698
+min            0.935270
+max           -0.927915
+q01            0.944784
+q05            0.933047
+q95           -0.934918
+q99           -0.945273
+lag1_std      -0.938925
+lag1_q01       0.935197
 lag1_q05       0.956255
 lag1_q95      -0.954354
+lag1_q99      -0.941943
 mfcc_std       0.956140
+mfcc_min      -0.932928
+mfcc_q01      -0.930852
 std_w2        -0.957527
+min_w2         0.936127
+max_w2        -0.922216
 q01_w2         0.950764
 q05_w2         0.952338
+q25_w2         0.937351
+q75_w2        -0.924677
 q95_w2        -0.954947
+q99_w2        -0.947537
+lag1_std_w2   -0.923685
+lag1_q05_w2    0.931927
 lag1_q25_w2    0.967940
 lag1_q75_w2   -0.967620
+lag1_q95_w2   -0.937318
+lag1_q99_w2   -0.913196
+mfcc_q01_w2   -0.943216
+std_w3        -0.917004
+min_w3         0.920079
+max_w3        -0.917319
+q01_w3         0.917700
+q05_w3         0.909383
+q95_w3        -0.911539
+q99_w3        -0.918954
+lag1_std_w3   -0.921971
+lag1_max_w3   -0.905989
+lag1_q01_w3    0.921786
+lag1_q05_w3    0.916900
+lag1_q95_w3   -0.911891
+lag1_q99_w3   -0.920707
+mfcc_std_w3    0.917679
 Name: mfcc_std_w2, dtype: float64
+
+	Correlated with mfcc_q01_w2:
+lag1_q25_w2   -0.915020
+lag1_q75_w2    0.918538
+mfcc_std_w2   -0.943216
+Name: mfcc_q01_w2, dtype: float64
+
+	Correlated with mfcc_q05_w2:
+mfcc_q05    0.91835
+Name: mfcc_q05_w2, dtype: float64
+
+	Correlated with mfcc_q25_w2:
+mfcc_q25       0.902841
+mfcc_q50_w2    0.919040
+Name: mfcc_q25_w2, dtype: float64
+
+	Correlated with mfcc_q50_w2:
+mfcc_q25_w2    0.91904
+Name: mfcc_q50_w2, dtype: float64
+
+	Correlated with mfcc_q99_w2:
+mfcc_q99    0.919869
+Name: mfcc_q99_w2, dtype: float64
+
+	Correlated with mfcc_kur_w2:
+mfcc_skew_w2   -0.914816
+Name: mfcc_kur_w2, dtype: float64
+
+	Correlated with mfcc_skew_w2:
+mfcc_kur_w2   -0.914816
+Name: mfcc_skew_w2, dtype: float64
+
+	Correlated with mfcc_sum_w3:
+mfcc_sum       0.919311
+mfcc_sum_w2    0.918869
+Name: mfcc_sum_w3, dtype: float64
 
 	Correlated with mfcc_std_w3:
 std           -0.954952
+min            0.910582
+max           -0.902200
 q01            0.952138
 q05            0.954798
 q95           -0.956115
 q99           -0.950929
+lag1_std      -0.909272
 lag1_q05       0.956545
 lag1_q95      -0.956943
+lag1_q99      -0.911108
 mfcc_std       0.959174
+mfcc_min      -0.922982
+mfcc_q01      -0.920513
+std_w2        -0.921017
+q01_w2         0.914023
+q05_w2         0.919751
+q95_w2        -0.921416
+q99_w2        -0.908185
+lag1_q25_w2    0.912072
+lag1_q75_w2   -0.903548
+mfcc_std_w2    0.917679
 std_w3        -0.967642
+min_w3         0.943343
+max_w3        -0.933058
 q01_w3         0.959265
 q05_w3         0.964436
+q25_w3         0.947516
+q75_w3        -0.946583
 q95_w3        -0.964223
 q99_w3        -0.958506
 lag1_std_w3   -0.969002
+lag1_min_w3    0.905108
+lag1_max_w3   -0.922007
 lag1_q01_w3    0.960916
 lag1_q05_w3    0.973858
 lag1_q25_w3    0.968062
 lag1_q75_w3   -0.969342
 lag1_q95_w3   -0.975217
 lag1_q99_w3   -0.966253
+mfcc_min_w3   -0.907927
 mfcc_q01_w3   -0.955980
 Name: mfcc_std_w3, dtype: float64
 
+	Correlated with mfcc_min_w3:
+mfcc_std_w3   -0.907927
+mfcc_q01_w3    0.908148
+Name: mfcc_min_w3, dtype: float64
+
+	Correlated with mfcc_max_w3:
+mfcc_max    0.92064
+Name: mfcc_max_w3, dtype: float64
+
 	Correlated with mfcc_q01_w3:
+q05           -0.900263
+q25_w3        -0.938048
+q75_w3         0.943395
 lag1_q25_w3   -0.950724
 lag1_q75_w3    0.955334
+lag1_q95_w3    0.906475
 mfcc_std_w3   -0.955980
+mfcc_min_w3    0.908148
 Name: mfcc_q01_w3, dtype: float64
+
+	Correlated with mfcc_q25_w3:
+mfcc_q25       0.906642
+mfcc_q50_w3    0.940481
+Name: mfcc_q25_w3, dtype: float64
+
+	Correlated with mfcc_q50_w3:
+mfcc_q25       0.906028
+mfcc_q25_w3    0.940481
+mfcc_q75_w3    0.928691
+Name: mfcc_q50_w3, dtype: float64
+
+	Correlated with mfcc_q75_w3:
+mfcc_q50_w3    0.928691
+Name: mfcc_q75_w3, dtype: float64
+
+	Correlated with mfcc_std_w4:
+mfcc_min_w4   -0.908064
+mfcc_q01_w4   -0.930636
+Name: mfcc_std_w4, dtype: float64
+
+	Correlated with mfcc_min_w4:
+mfcc_std_w4   -0.908064
+mfcc_q01_w4    0.939977
+Name: mfcc_min_w4, dtype: float64
+
+	Correlated with mfcc_q01_w4:
+mfcc_std_w4   -0.930636
+mfcc_min_w4    0.939977
+Name: mfcc_q01_w4, dtype: float64
+
+	Correlated with mfcc_q50_w4:
+mfcc_q75_w4    0.929848
+Name: mfcc_q50_w4, dtype: float64
+
+	Correlated with mfcc_q75_w4:
+mfcc_q50_w4    0.929848
+Name: mfcc_q75_w4, dtype: float64
 
 
 COLUMNS STARTING WITH PREFIX sc:
 
 
+	Correlated with sc_max:
+sc_max_w1    0.902703
+Name: sc_max, dtype: float64
+
+	Correlated with sc_mean_w1:
+sc_q25_w1    0.915004
+sc_q50_w1    0.939986
+Name: sc_mean_w1, dtype: float64
+
 	Correlated with sc_min_w1:
-sc_q01_w1    0.964983
+sc_q01_w1      0.964983
+stft_min_w1    0.911063
+stft_q01_w1    0.902043
 Name: sc_min_w1, dtype: float64
 
 	Correlated with sc_max_w1:
+sc_max       0.902703
 sc_q99_w1    0.966718
 Name: sc_max_w1, dtype: float64
 
 	Correlated with sc_q01_w1:
 sc_min_w1    0.964983
+sc_q05_w1    0.913207
 Name: sc_q01_w1, dtype: float64
+
+	Correlated with sc_q05_w1:
+sc_q01_w1    0.913207
+Name: sc_q05_w1, dtype: float64
+
+	Correlated with sc_q25_w1:
+sc_mean_w1    0.915004
+Name: sc_q25_w1, dtype: float64
+
+	Correlated with sc_q50_w1:
+sc_mean_w1    0.939986
+Name: sc_q50_w1, dtype: float64
 
 	Correlated with sc_q99_w1:
 sc_max_w1    0.966718
 Name: sc_q99_w1, dtype: float64
+
+	Correlated with sc_mean_w2:
+sc_q75_w2    0.904567
+Name: sc_mean_w2, dtype: float64
 
 	Correlated with sc_min_w2:
 sc_q01_w2    0.967393
@@ -1136,9 +2239,29 @@ Name: sc_max_w2, dtype: float64
 sc_min_w2    0.967393
 Name: sc_q01_w2, dtype: float64
 
+	Correlated with sc_q75_w2:
+sc_mean_w2    0.904567
+Name: sc_q75_w2, dtype: float64
+
 	Correlated with sc_q99_w2:
 sc_max_w2    0.991712
 Name: sc_q99_w2, dtype: float64
+
+	Correlated with sc_kur_w2:
+sc_skew_w2    0.945627
+Name: sc_kur_w2, dtype: float64
+
+	Correlated with sc_skew_w2:
+sc_kur_w2    0.945627
+Name: sc_skew_w2, dtype: float64
+
+	Correlated with sc_mean_w3:
+sc_q75_w3    0.941299
+Name: sc_mean_w3, dtype: float64
+
+	Correlated with sc_std_w3:
+sc_q95_w3    0.927802
+Name: sc_std_w3, dtype: float64
 
 	Correlated with sc_min_w3:
 sc_q01_w3    0.97749
@@ -1149,8 +2272,29 @@ sc_q99_w3    0.979005
 Name: sc_max_w3, dtype: float64
 
 	Correlated with sc_q01_w3:
-sc_min_w3    0.97749
+sc_min_w3    0.977490
+sc_q05_w3    0.905767
 Name: sc_q01_w3, dtype: float64
+
+	Correlated with sc_q05_w3:
+sc_q01_w3    0.905767
+Name: sc_q05_w3, dtype: float64
+
+	Correlated with sc_q25_w3:
+sc_q50_w3    0.916823
+Name: sc_q25_w3, dtype: float64
+
+	Correlated with sc_q50_w3:
+sc_q25_w3    0.916823
+Name: sc_q50_w3, dtype: float64
+
+	Correlated with sc_q75_w3:
+sc_mean_w3    0.941299
+Name: sc_q75_w3, dtype: float64
+
+	Correlated with sc_q95_w3:
+sc_std_w3    0.927802
+Name: sc_q95_w3, dtype: float64
 
 	Correlated with sc_q99_w3:
 sc_max_w3    0.979005
@@ -1164,8 +2308,13 @@ Name: sc_kur_w3, dtype: float64
 sc_kur_w3    0.954365
 Name: sc_skew_w3, dtype: float64
 
+	Correlated with sc_mean_w4:
+sc_q50_w4    0.929752
+Name: sc_mean_w4, dtype: float64
+
 	Correlated with sc_min_w4:
 sc_q01_w4    0.976873
+sc_q05_w4    0.921556
 Name: sc_min_w4, dtype: float64
 
 	Correlated with sc_max_w4:
@@ -1179,11 +2328,21 @@ sc_q05_w4    0.951609
 Name: sc_q01_w4, dtype: float64
 
 	Correlated with sc_q05_w4:
+sc_min_w4    0.921556
 sc_q01_w4    0.951609
 Name: sc_q05_w4, dtype: float64
 
+	Correlated with sc_q50_w4:
+sc_mean_w4    0.929752
+Name: sc_q50_w4, dtype: float64
+
+	Correlated with sc_q75_w4:
+sc_q95_w4    0.923028
+Name: sc_q75_w4, dtype: float64
+
 	Correlated with sc_q95_w4:
 sc_max_w4    0.956313
+sc_q75_w4    0.923028
 sc_q99_w4    0.976273
 Name: sc_q95_w4, dtype: float64
 
@@ -1199,52 +2358,99 @@ COLUMNS STARTING WITH PREFIX stft:
 	Correlated with stft_mean:
 stft_q25     0.951573
 stft_q50     0.987315
+stft_q75     0.920615
 stft_skew   -0.967857
 Name: stft_mean, dtype: float64
 
+	Correlated with stft_min:
+stft_q01    0.920459
+Name: stft_min, dtype: float64
+
+	Correlated with stft_q01:
+stft_min    0.920459
+Name: stft_q01, dtype: float64
+
 	Correlated with stft_q25:
 stft_mean    0.951573
+stft_q50     0.912141
 Name: stft_q25, dtype: float64
 
 	Correlated with stft_q50:
 stft_mean    0.987315
+stft_q25     0.912141
+stft_q75     0.925146
 stft_skew   -0.987844
 Name: stft_q50, dtype: float64
+
+	Correlated with stft_q75:
+stft_mean    0.920615
+stft_q50     0.925146
+stft_skew   -0.947317
+Name: stft_q75, dtype: float64
 
 	Correlated with stft_skew:
 stft_mean   -0.967857
 stft_q50    -0.987844
+stft_q75    -0.947317
 Name: stft_skew, dtype: float64
 
 	Correlated with stft_mean_w1:
-stft_q25_w1    0.978271
-stft_q50_w1    0.975622
+stft_q25_w1     0.978271
+stft_q50_w1     0.975622
+stft_q75_w1     0.908470
+stft_skew_w1   -0.904541
 Name: stft_mean_w1, dtype: float64
 
 	Correlated with stft_min_w1:
+sc_min_w1      0.911063
 stft_q01_w1    0.983295
 Name: stft_min_w1, dtype: float64
 
 	Correlated with stft_q01_w1:
+sc_min_w1      0.902043
 stft_min_w1    0.983295
+stft_q05_w1    0.903120
 Name: stft_q01_w1, dtype: float64
+
+	Correlated with stft_q05_w1:
+stft_q01_w1    0.90312
+Name: stft_q05_w1, dtype: float64
 
 	Correlated with stft_q25_w1:
 stft_mean_w1    0.978271
+stft_q50_w1     0.935080
 Name: stft_q25_w1, dtype: float64
 
 	Correlated with stft_q50_w1:
 stft_mean_w1    0.975622
+stft_q25_w1     0.935080
+stft_q75_w1     0.946600
+stft_skew_w1   -0.945869
 Name: stft_q50_w1, dtype: float64
 
+	Correlated with stft_q75_w1:
+stft_mean_w1    0.90847
+stft_q50_w1     0.94660
+stft_skew_w1   -0.91053
+Name: stft_q75_w1, dtype: float64
+
+	Correlated with stft_skew_w1:
+stft_mean_w1   -0.904541
+stft_q50_w1    -0.945869
+stft_q75_w1    -0.910530
+Name: stft_skew_w1, dtype: float64
+
 	Correlated with stft_mean_w2:
+stft_q25_w2     0.949996
 stft_q50_w2     0.992054
 stft_q75_w2     0.968013
+stft_kur_w2    -0.924305
 stft_skew_w2   -0.975479
 Name: stft_mean_w2, dtype: float64
 
 	Correlated with stft_min_w2:
-stft_q01_w2    0.97216
+stft_q01_w2    0.972160
+stft_q05_w2    0.920882
 Name: stft_min_w2, dtype: float64
 
 	Correlated with stft_q01_w2:
@@ -1253,12 +2459,22 @@ stft_q05_w2    0.959081
 Name: stft_q01_w2, dtype: float64
 
 	Correlated with stft_q05_w2:
+stft_min_w2    0.920882
 stft_q01_w2    0.959081
+stft_q25_w2    0.908969
 Name: stft_q05_w2, dtype: float64
+
+	Correlated with stft_q25_w2:
+stft_mean_w2    0.949996
+stft_q05_w2     0.908969
+stft_q50_w2     0.938465
+Name: stft_q25_w2, dtype: float64
 
 	Correlated with stft_q50_w2:
 stft_mean_w2    0.992054
+stft_q25_w2     0.938465
 stft_q75_w2     0.952213
+stft_kur_w2    -0.912570
 stft_skew_w2   -0.974804
 Name: stft_q50_w2, dtype: float64
 
@@ -1270,6 +2486,8 @@ stft_skew_w2   -0.986435
 Name: stft_q75_w2, dtype: float64
 
 	Correlated with stft_kur_w2:
+stft_mean_w2   -0.924305
+stft_q50_w2    -0.912570
 stft_q75_w2    -0.982235
 stft_skew_w2    0.973098
 Name: stft_kur_w2, dtype: float64
@@ -1291,6 +2509,7 @@ Name: stft_mean_w3, dtype: float64
 
 	Correlated with stft_min_w3:
 stft_q01_w3    0.96969
+stft_q05_w3    0.92254
 Name: stft_min_w3, dtype: float64
 
 	Correlated with stft_q01_w3:
@@ -1299,23 +2518,30 @@ stft_q05_w3    0.968099
 Name: stft_q01_w3, dtype: float64
 
 	Correlated with stft_q05_w3:
+stft_min_w3    0.922540
 stft_q01_w3    0.968099
+stft_q25_w3    0.929793
 Name: stft_q05_w3, dtype: float64
 
 	Correlated with stft_q25_w3:
 stft_mean_w3    0.969968
+stft_q05_w3     0.929793
 stft_q50_w3     0.969343
+stft_q75_w3     0.920866
+stft_skew_w3   -0.916715
 Name: stft_q25_w3, dtype: float64
 
 	Correlated with stft_q50_w3:
 stft_mean_w3    0.994166
 stft_q25_w3     0.969343
 stft_q75_w3     0.969515
+stft_kur_w3    -0.946458
 stft_skew_w3   -0.975306
 Name: stft_q50_w3, dtype: float64
 
 	Correlated with stft_q75_w3:
 stft_mean_w3    0.983488
+stft_q25_w3     0.920866
 stft_q50_w3     0.969515
 stft_kur_w3    -0.988675
 stft_skew_w3   -0.994594
@@ -1323,12 +2549,14 @@ Name: stft_q75_w3, dtype: float64
 
 	Correlated with stft_kur_w3:
 stft_mean_w3   -0.962313
+stft_q50_w3    -0.946458
 stft_q75_w3    -0.988675
 stft_skew_w3    0.989438
 Name: stft_kur_w3, dtype: float64
 
 	Correlated with stft_skew_w3:
 stft_mean_w3   -0.984149
+stft_q25_w3    -0.916715
 stft_q50_w3    -0.975306
 stft_q75_w3    -0.994594
 stft_kur_w3     0.989438
@@ -1345,23 +2573,34 @@ Name: stft_std_w4, dtype: float64
 
 	Correlated with stft_min_w4:
 stft_q01_w4    0.986603
+stft_q05_w4    0.905642
 Name: stft_min_w4, dtype: float64
 
 	Correlated with stft_q01_w4:
 stft_min_w4    0.986603
+stft_q05_w4    0.928750
 Name: stft_q01_w4, dtype: float64
 
 	Correlated with stft_q05_w4:
 stft_std_w4   -0.966618
+stft_min_w4    0.905642
+stft_q01_w4    0.928750
 Name: stft_q05_w4, dtype: float64
 
 	Correlated with stft_q25_w4:
 stft_mean_w4    0.979509
+stft_q50_w4     0.909003
 Name: stft_q25_w4, dtype: float64
 
 	Correlated with stft_q50_w4:
-stft_mean_w4    0.95003
+stft_mean_w4    0.950030
+stft_q25_w4     0.909003
+stft_q75_w4     0.927362
 Name: stft_q50_w4, dtype: float64
+
+	Correlated with stft_q75_w4:
+stft_q50_w4    0.927362
+Name: stft_q75_w4, dtype: float64
 
 
 COLUMNS STARTING WITH PREFIX length:
@@ -1406,27 +2645,45 @@ max           -0.956685
 q05            0.985705
 q95           -0.985230
 q99           -0.993289
+lag1_std      -0.933895
+lag1_q01       0.923741
 lag1_q05       0.971932
 lag1_q95      -0.970899
+lag1_q99      -0.936962
 mfcc_std       0.979294
 mfcc_min      -0.975147
 mfcc_q01      -0.971505
 std_w2        -0.982147
 min_w2         0.956468
+max_w2        -0.941593
 q01_w2         0.980119
 q05_w2         0.981057
+q25_w2         0.928972
+q75_w2        -0.927379
 q95_w2        -0.976557
 q99_w2        -0.969835
+lag1_std_w2   -0.900183
+lag1_q05_w2    0.904688
+lag1_q25_w2    0.939751
+lag1_q75_w2   -0.931152
+lag1_q95_w2   -0.912637
+mfcc_std_w2    0.944784
 std_w3        -0.985389
 min_w3         0.974406
 max_w3        -0.961430
 q01_w3         0.986583
 q05_w3         0.981655
+q25_w3         0.925759
+q75_w3        -0.925853
 q95_w3        -0.979235
 q99_w3        -0.981803
 lag1_std_w3   -0.967060
+lag1_min_w3    0.911173
+lag1_max_w3   -0.929701
 lag1_q01_w3    0.961683
 lag1_q05_w3    0.967383
+lag1_q25_w3    0.926532
+lag1_q75_w3   -0.920811
 lag1_q95_w3   -0.967236
 lag1_q99_w3   -0.966458
 mfcc_std_w3    0.952138
@@ -1434,19 +2691,34 @@ Name: q01, dtype: float64
 
 	Correlated with q05:
 std           -0.992325
+min            0.929302
+max           -0.920527
 q01            0.985705
 q95           -0.997485
 q99           -0.982705
+lag1_std      -0.917612
+lag1_q01       0.904605
 lag1_q05       0.964485
 lag1_q95      -0.968279
+lag1_q99      -0.921054
 mfcc_std       0.969304
+mfcc_min      -0.948659
+mfcc_q01      -0.945079
 std_w2        -0.973479
+min_w2         0.920451
+max_w2        -0.906147
 q01_w2         0.958341
 q05_w2         0.979041
 q25_w2         0.952518
+q75_w2        -0.949900
 q95_w2        -0.973576
 q99_w2        -0.950822
+lag1_q25_w2    0.939314
+lag1_q75_w2   -0.928684
+mfcc_std_w2    0.933047
 std_w3        -0.985206
+min_w3         0.948977
+max_w3        -0.937478
 q01_w3         0.972720
 q05_w3         0.983140
 q25_w3         0.960728
@@ -1454,29 +2726,56 @@ q75_w3        -0.957807
 q95_w3        -0.982566
 q99_w3        -0.972538
 lag1_std_w3   -0.959321
+lag1_max_w3   -0.901799
+lag1_q01_w3    0.948437
 lag1_q05_w3    0.963654
 lag1_q25_w3    0.951991
+lag1_q75_w3   -0.945341
 lag1_q95_w3   -0.969215
 lag1_q99_w3   -0.957106
 mfcc_std_w3    0.954798
+mfcc_q01_w3   -0.900263
 Name: q05, dtype: float64
+
+	Correlated with q25:
+q75        -0.928647
+lag1_q25    0.927034
+Name: q25, dtype: float64
+
+	Correlated with q75:
+q25   -0.928647
+Name: q75, dtype: float64
 
 	Correlated with q95:
 std            0.992718
+min           -0.929553
+max            0.921926
 q01           -0.985230
 q05           -0.997485
 q99            0.985235
+lag1_std       0.919947
+lag1_q01      -0.906904
 lag1_q05      -0.966509
 lag1_q95       0.969910
+lag1_q99       0.923324
 mfcc_std      -0.969932
 mfcc_min       0.951035
+mfcc_q01       0.945721
 std_w2         0.974976
+min_w2        -0.921023
+max_w2         0.908364
 q01_w2        -0.958610
 q05_w2        -0.979001
 q25_w2        -0.954036
+q75_w2         0.945886
 q95_w2         0.977940
 q99_w2         0.953968
+lag1_q25_w2   -0.941885
+lag1_q75_w2    0.931370
+mfcc_std_w2   -0.934918
 std_w3         0.985240
+min_w3        -0.949256
+max_w3         0.939408
 q01_w3        -0.971719
 q05_w3        -0.980278
 q25_w3        -0.962586
@@ -1484,9 +2783,11 @@ q75_w3         0.954711
 q95_w3         0.984664
 q99_w3         0.974231
 lag1_std_w3    0.960711
+lag1_max_w3    0.904438
 lag1_q01_w3   -0.950117
 lag1_q05_w3   -0.965099
 lag1_q25_w3   -0.951967
+lag1_q75_w3    0.946072
 lag1_q95_w3    0.969855
 lag1_q99_w3    0.958341
 mfcc_std_w3   -0.956115
@@ -1499,48 +2800,88 @@ max            0.961050
 q01           -0.993289
 q05           -0.982705
 q95            0.985235
+lag1_std       0.936207
+lag1_q01      -0.927063
 lag1_q05      -0.974876
 lag1_q95       0.973389
+lag1_q99       0.939925
 mfcc_std      -0.976912
 mfcc_min       0.975985
 mfcc_q01       0.969173
 std_w2         0.981937
 min_w2        -0.953233
+max_w2         0.947034
 q01_w2        -0.975278
 q05_w2        -0.977463
+q25_w2        -0.931466
+q75_w2         0.916020
 q95_w2         0.981523
 q99_w2         0.977286
+lag1_std_w2    0.901993
+lag1_q05_w2   -0.908127
+lag1_q25_w2   -0.941708
+lag1_q75_w2    0.932770
+lag1_q95_w2    0.916015
+mfcc_std_w2   -0.945273
 std_w3         0.983676
 min_w3        -0.969561
 max_w3         0.966677
 q01_w3        -0.978689
 q05_w3        -0.975195
+q25_w3        -0.931319
+q75_w3         0.916322
 q95_w3         0.982204
 q99_w3         0.986759
 lag1_std_w3    0.969884
+lag1_min_w3   -0.914592
+lag1_max_w3    0.932498
 lag1_q01_w3   -0.965619
 lag1_q05_w3   -0.970182
+lag1_q25_w3   -0.925670
+lag1_q75_w3    0.921329
 lag1_q95_w3    0.968962
 lag1_q99_w3    0.969061
 mfcc_std_w3   -0.950929
 Name: q99, dtype: float64
 
 	Correlated with q01_w1:
-std_w1   -0.983799
-q99_w1   -0.995672
+std_w1        -0.983799
+min_w1         0.921248
+max_w1        -0.914337
+q99_w1        -0.995672
+lag1_std_w1   -0.910805
+lag1_q01_w1    0.944366
+lag1_q99_w1   -0.948106
 Name: q01_w1, dtype: float64
 
 	Correlated with q05_w1:
-q95_w1   -0.984347
+q95_w1        -0.984347
+lag1_q05_w1    0.949266
+lag1_q95_w1   -0.942371
 Name: q05_w1, dtype: float64
 
+	Correlated with q25_w1:
+q75_w1   -0.934993
+Name: q25_w1, dtype: float64
+
+	Correlated with q75_w1:
+q25_w1   -0.934993
+Name: q75_w1, dtype: float64
+
 	Correlated with q95_w1:
-q05_w1   -0.984347
+q05_w1        -0.984347
+lag1_q05_w1   -0.944097
+lag1_q95_w1    0.940055
 Name: q95_w1, dtype: float64
 
 	Correlated with q99_w1:
-std_w1    0.984235
-q01_w1   -0.995672
+std_w1         0.984235
+min_w1        -0.922273
+max_w1         0.917582
+q01_w1        -0.995672
+lag1_std_w1    0.912264
+lag1_q01_w1   -0.945235
+lag1_q99_w1    0.948760
 Name: q99_w1, dtype: float64
 
 	Correlated with q01_w2:
@@ -1551,7 +2892,11 @@ q01            0.980119
 q05            0.958341
 q95           -0.958610
 q99           -0.975278
+lag1_std      -0.924028
+lag1_q01       0.916707
 lag1_q05       0.952086
+lag1_q95      -0.948985
+lag1_q99      -0.927651
 mfcc_std       0.962349
 mfcc_min      -0.966601
 mfcc_q01      -0.962449
@@ -1559,109 +2904,259 @@ std_w2        -0.993260
 min_w2         0.980313
 max_w2        -0.968541
 q05_w2         0.985722
+q25_w2         0.923304
+q75_w2        -0.920484
 q95_w2        -0.982097
 q99_w2        -0.989500
+lag1_std_w2   -0.900669
+lag1_q05_w2    0.907787
+lag1_q25_w2    0.937914
+lag1_q75_w2   -0.929895
+lag1_q95_w2   -0.914242
 mfcc_std_w2    0.950764
+std_w3        -0.943520
+min_w3         0.944364
+max_w3        -0.936988
+q01_w3         0.945955
+q05_w3         0.937246
+q95_w3        -0.936672
+q99_w3        -0.944507
+lag1_std_w3   -0.931765
+lag1_max_w3   -0.906816
+lag1_q01_w3    0.930086
+lag1_q05_w3    0.928024
+lag1_q95_w3   -0.925377
+lag1_q99_w3   -0.931879
+mfcc_std_w3    0.914023
 Name: q01_w2, dtype: float64
 
 	Correlated with q05_w2:
 std           -0.984448
+min            0.946221
+max           -0.938315
 q01            0.981057
 q05            0.979041
 q95           -0.979001
 q99           -0.977463
+lag1_std      -0.922599
+lag1_q01       0.913364
 lag1_q05       0.955760
 lag1_q95      -0.956741
+lag1_q99      -0.926743
 mfcc_std       0.962127
 mfcc_min      -0.954370
+mfcc_q01      -0.949931
 std_w2        -0.996151
 min_w2         0.950966
+max_w2        -0.938634
 q01_w2         0.985722
 q25_w2         0.960128
 q75_w2        -0.956775
 q95_w2        -0.994119
 q99_w2        -0.978840
+lag1_q05_w2    0.905192
 lag1_q25_w2    0.952001
+lag1_q75_w2   -0.942589
+lag1_q95_w2   -0.915029
 mfcc_std_w2    0.952338
 std_w3        -0.952094
+min_w3         0.935331
+max_w3        -0.927480
+q01_w3         0.946773
+q05_w3         0.945844
+q25_w3         0.911509
+q75_w3        -0.906046
+q95_w3        -0.947240
+q99_w3        -0.946988
+lag1_std_w3   -0.932892
+lag1_q01_w3    0.926469
+lag1_q05_w3    0.931484
+lag1_q25_w3    0.900410
+lag1_q95_w3   -0.933034
+lag1_q99_w3   -0.931641
+mfcc_std_w3    0.919751
 Name: q05_w2, dtype: float64
 
 	Correlated with q25_w2:
+std           -0.942801
+q01            0.928972
 q05            0.952518
 q95           -0.954036
+q99           -0.931466
+lag1_q05       0.927720
+lag1_q95      -0.933856
+lag1_q99      -0.906622
+mfcc_std       0.922124
 std_w2        -0.954260
+q01_w2         0.923304
 q05_w2         0.960128
 q75_w2        -0.985345
 q95_w2        -0.959861
+q99_w2        -0.923602
 lag1_q25_w2    0.953665
+lag1_q75_w2   -0.947789
+lag1_q95_w2   -0.904878
+mfcc_std_w2    0.937351
+std_w3        -0.909669
+q05_w3         0.901631
+q95_w3        -0.908207
+q99_w3        -0.900079
 Name: q25_w2, dtype: float64
 
 	Correlated with q75_w2:
-q05_w2   -0.956775
-q25_w2   -0.985345
+std            0.936098
+q01           -0.927379
+q05           -0.949900
+q95            0.945886
+q99            0.916020
+lag1_q05      -0.914151
+lag1_q95       0.921358
+mfcc_std      -0.914801
+std_w2         0.944841
+q01_w2        -0.920484
+q05_w2        -0.956775
+q25_w2        -0.985345
+q95_w2         0.942000
+q99_w2         0.902833
+lag1_q25_w2   -0.939843
+lag1_q75_w2    0.933788
+mfcc_std_w2   -0.924677
+std_w3         0.904262
+q05_w3        -0.901494
 Name: q75_w2, dtype: float64
 
 	Correlated with q95_w2:
 std            0.982479
+min           -0.945095
+max            0.941865
 q01           -0.976557
 q05           -0.973576
 q95            0.977940
 q99            0.981523
+lag1_std       0.926130
+lag1_q01      -0.917396
 lag1_q05      -0.959074
 lag1_q95       0.959001
+lag1_q99       0.930415
 mfcc_std      -0.961503
 mfcc_min       0.957058
+mfcc_q01       0.949672
 std_w2         0.995329
+min_w2        -0.949812
+max_w2         0.943201
 q01_w2        -0.982097
 q05_w2        -0.994119
 q25_w2        -0.959861
+q75_w2         0.942000
 q99_w2         0.985189
+lag1_std_w2    0.901232
+lag1_q05_w2   -0.909750
 lag1_q25_w2   -0.954598
+lag1_q75_w2    0.945402
+lag1_q95_w2    0.919131
 mfcc_std_w2   -0.954947
 std_w3         0.950175
+min_w3        -0.934232
+max_w3         0.931181
+q01_w3        -0.942755
+q05_w3        -0.940753
+q25_w3        -0.912192
+q95_w3         0.947842
+q99_w3         0.948999
+lag1_std_w3    0.935529
+lag1_q01_w3   -0.930049
+lag1_q05_w3   -0.934072
+lag1_q95_w3    0.934139
+lag1_q99_w3    0.934236
+mfcc_std_w3   -0.921416
 Name: q95_w2, dtype: float64
 
 	Correlated with q99_w2:
-std         0.972840
-min        -0.964310
-max         0.967231
-q01        -0.969835
-q05        -0.950822
-q95         0.953968
-q99         0.977286
-lag1_q05   -0.950857
-mfcc_std   -0.955074
-mfcc_min    0.964350
-mfcc_q01    0.956355
-std_w2      0.990573
-min_w2     -0.972743
-max_w2      0.974826
-q01_w2     -0.989500
-q05_w2     -0.978840
-q95_w2      0.985189
+std            0.972840
+min           -0.964310
+max            0.967231
+q01           -0.969835
+q05           -0.950822
+q95            0.953968
+q99            0.977286
+lag1_std       0.921737
+lag1_q01      -0.915966
+lag1_q05      -0.950857
+lag1_q95       0.947058
+lag1_q99       0.926467
+mfcc_std      -0.955074
+mfcc_min       0.964350
+mfcc_q01       0.956355
+std_w2         0.990573
+min_w2        -0.972743
+max_w2         0.974826
+q01_w2        -0.989500
+q05_w2        -0.978840
+q25_w2        -0.923602
+q75_w2         0.902833
+q95_w2         0.985189
+lag1_q05_w2   -0.907666
+lag1_q25_w2   -0.935792
+lag1_q75_w2    0.927463
+lag1_q95_w2    0.913962
+mfcc_std_w2   -0.947537
+std_w3         0.936884
+min_w3        -0.935828
+max_w3         0.937154
+q01_w3        -0.934750
+q05_w3        -0.926894
+q95_w3         0.933299
+q99_w3         0.942895
+lag1_std_w3    0.929671
+lag1_max_w3    0.905789
+lag1_q01_w3   -0.929064
+lag1_q05_w3   -0.925733
+lag1_q95_w3    0.921907
+lag1_q99_w3    0.929583
+mfcc_std_w3   -0.908185
 Name: q99_w2, dtype: float64
 
 	Correlated with q01_w3:
 std           -0.981565
 min            0.950630
+max           -0.938002
 q01            0.986583
 q05            0.972720
 q95           -0.971719
 q99           -0.978689
+lag1_std      -0.921586
+lag1_q01       0.910274
 lag1_q05       0.962954
 lag1_q95      -0.961675
+lag1_q99      -0.923671
 mfcc_std       0.964158
 mfcc_min      -0.957537
 mfcc_q01      -0.954070
+std_w2        -0.947545
+min_w2         0.927916
+max_w2        -0.910789
+q01_w2         0.945955
+q05_w2         0.946773
+q95_w2        -0.942755
+q99_w2        -0.934750
+lag1_q25_w2    0.913917
+lag1_q75_w2   -0.905706
+mfcc_std_w2    0.917700
 std_w3        -0.993624
 min_w3         0.984938
 max_w3        -0.967906
 q05_w3         0.991598
+q25_w3         0.922772
+q75_w3        -0.927085
 q95_w3        -0.986510
 q99_w3        -0.990650
 lag1_std_w3   -0.975954
+lag1_min_w3    0.918584
+lag1_max_w3   -0.936991
 lag1_q01_w3    0.971044
 lag1_q05_w3    0.978278
+lag1_q25_w3    0.933058
+lag1_q75_w3   -0.926606
 lag1_q95_w3   -0.977426
 lag1_q99_w3   -0.976210
 mfcc_std_w3    0.959265
@@ -1669,69 +3164,145 @@ Name: q01_w3, dtype: float64
 
 	Correlated with q05_w3:
 std           -0.981101
+min            0.930253
+max           -0.918649
 q01            0.981655
 q05            0.983140
 q95           -0.980278
 q99           -0.975195
+lag1_std      -0.909133
 lag1_q05       0.958404
 lag1_q95      -0.959851
+lag1_q99      -0.911292
 mfcc_std       0.959360
+mfcc_min      -0.946287
+mfcc_q01      -0.942216
+std_w2        -0.943506
+min_w2         0.910015
+q01_w2         0.937246
+q05_w2         0.945844
+q25_w2         0.901631
+q75_w2        -0.901494
+q95_w2        -0.940753
+q99_w2        -0.926894
+lag1_q25_w2    0.910225
+lag1_q75_w2   -0.900351
+mfcc_std_w2    0.909383
 std_w3        -0.996951
 min_w3         0.966411
 max_w3        -0.950278
 q01_w3         0.991598
+q25_w3         0.948974
 q75_w3        -0.952742
 q95_w3        -0.993703
 q99_w3        -0.986067
 lag1_std_w3   -0.971451
+lag1_min_w3    0.900178
+lag1_max_w3   -0.918094
 lag1_q01_w3    0.961987
 lag1_q05_w3    0.977902
 lag1_q25_w3    0.953667
+lag1_q75_w3   -0.945415
 lag1_q95_w3   -0.981717
 lag1_q99_w3   -0.970179
 mfcc_std_w3    0.964436
 Name: q05_w3, dtype: float64
 
 	Correlated with q25_w3:
+std           -0.941156
+q01            0.925759
 q05            0.960728
 q95           -0.962586
+q99           -0.931319
+lag1_q05       0.911628
+lag1_q95      -0.918579
+mfcc_std       0.921096
+std_w2        -0.905494
+q05_w2         0.911509
+q95_w2        -0.912192
 std_w3        -0.954183
+q01_w3         0.922772
+q05_w3         0.948974
 q75_w3        -0.983699
 q95_w3        -0.957599
+q99_w3        -0.932916
+lag1_std_w3   -0.924257
+lag1_q01_w3    0.908265
+lag1_q05_w3    0.934178
 lag1_q25_w3    0.968394
 lag1_q75_w3   -0.965261
+lag1_q95_w3   -0.944672
+lag1_q99_w3   -0.919782
+mfcc_std_w3    0.947516
+mfcc_q01_w3   -0.938048
 Name: q25_w3, dtype: float64
 
 	Correlated with q75_w3:
+std            0.935021
+q01           -0.925853
 q05           -0.957807
 q95            0.954711
+q99            0.916322
+lag1_q05      -0.901287
+lag1_q95       0.908717
+mfcc_std      -0.917520
+q05_w2        -0.906046
 std_w3         0.950311
+q01_w3        -0.927085
 q05_w3        -0.952742
 q25_w3        -0.983699
+q95_w3         0.946286
+q99_w3         0.919308
+lag1_std_w3    0.915036
+lag1_q05_w3   -0.925722
 lag1_q25_w3   -0.967050
 lag1_q75_w3    0.962277
+lag1_q95_w3    0.937620
+lag1_q99_w3    0.910888
+mfcc_std_w3   -0.946583
+mfcc_q01_w3    0.943395
 Name: q75_w3, dtype: float64
 
 	Correlated with q95_w3:
 std            0.982794
+min           -0.927860
+max            0.922136
 q01           -0.979235
 q05           -0.982566
 q95            0.984664
 q99            0.982204
+lag1_std       0.912279
 lag1_q05      -0.961872
 lag1_q95       0.963238
+lag1_q99       0.914726
 mfcc_std      -0.959824
+mfcc_min       0.948572
+mfcc_q01       0.941939
+std_w2         0.946671
+min_w2        -0.909154
+q01_w2        -0.936672
+q05_w2        -0.947240
+q25_w2        -0.908207
+q95_w2         0.947842
+q99_w2         0.933299
+lag1_q25_w2   -0.914620
+lag1_q75_w2    0.904406
+mfcc_std_w2   -0.911539
 std_w3         0.997180
 min_w3        -0.963345
 max_w3         0.954474
 q01_w3        -0.986510
 q05_w3        -0.993703
 q25_w3        -0.957599
+q75_w3         0.946286
 q99_w3         0.991495
 lag1_std_w3    0.973697
+lag1_min_w3   -0.902627
+lag1_max_w3    0.920196
 lag1_q01_w3   -0.964600
 lag1_q05_w3   -0.980450
 lag1_q25_w3   -0.954625
+lag1_q75_w3    0.947696
 lag1_q95_w3    0.983454
 lag1_q99_w3    0.971872
 mfcc_std_w3   -0.964223
@@ -1739,52 +3310,95 @@ Name: q95_w3, dtype: float64
 
 	Correlated with q99_w3:
 std            0.982578
+min           -0.947207
+max            0.945133
 q01           -0.981803
 q05           -0.972538
 q95            0.974231
 q99            0.986759
+lag1_std       0.923385
+lag1_q01      -0.913169
 lag1_q05      -0.966305
 lag1_q95       0.964943
+lag1_q99       0.926449
 mfcc_std      -0.962394
 mfcc_min       0.958417
 mfcc_q01       0.952084
 std_w2         0.950092
+min_w2        -0.926616
+max_w2         0.918463
+q01_w2        -0.944507
+q05_w2        -0.946988
+q25_w2        -0.900079
+q95_w2         0.948999
+q99_w2         0.942895
+lag1_q25_w2   -0.917095
+lag1_q75_w2    0.908151
+mfcc_std_w2   -0.918954
 std_w3         0.993606
 min_w3        -0.979321
 max_w3         0.977219
 q01_w3        -0.990650
 q05_w3        -0.986067
+q25_w3        -0.932916
+q75_w3         0.919308
 q95_w3         0.991495
 lag1_std_w3    0.980168
+lag1_min_w3   -0.922144
+lag1_max_w3    0.939978
 lag1_q01_w3   -0.976723
 lag1_q05_w3   -0.981932
+lag1_q25_w3   -0.934415
+lag1_q75_w3    0.929085
 lag1_q95_w3    0.980569
 lag1_q99_w3    0.980169
 mfcc_std_w3   -0.958506
 Name: q99_w3, dtype: float64
 
 	Correlated with q01_w4:
-std_w4   -0.994931
-min_w4    0.970081
-max_w4   -0.966573
-q99_w4   -0.993701
+std_w4        -0.994931
+min_w4         0.970081
+max_w4        -0.966573
+q05_w4         0.948191
+q95_w4        -0.945735
+q99_w4        -0.993701
+lag1_std_w4   -0.926911
+lag1_q01_w4    0.920826
+lag1_q99_w4   -0.924944
 Name: q01_w4, dtype: float64
 
 	Correlated with q05_w4:
 std_w4   -0.953585
+q01_w4    0.948191
 q95_w4   -0.986739
+q99_w4   -0.945291
 Name: q05_w4, dtype: float64
+
+	Correlated with q25_w4:
+q75_w4   -0.924019
+Name: q25_w4, dtype: float64
+
+	Correlated with q75_w4:
+q25_w4   -0.924019
+Name: q75_w4, dtype: float64
 
 	Correlated with q95_w4:
 std_w4    0.953032
+q01_w4   -0.945735
 q05_w4   -0.986739
+q99_w4    0.947176
 Name: q95_w4, dtype: float64
 
 	Correlated with q99_w4:
-std_w4    0.995609
-min_w4   -0.966517
-max_w4    0.970444
-q01_w4   -0.993701
+std_w4         0.995609
+min_w4        -0.966517
+max_w4         0.970444
+q01_w4        -0.993701
+q05_w4        -0.945291
+q95_w4         0.947176
+lag1_std_w4    0.925299
+lag1_q01_w4   -0.919292
+lag1_q99_w4    0.922780
 Name: q99_w4, dtype: float64
 
 
