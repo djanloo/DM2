@@ -1,5 +1,5 @@
 # DM2
-Second part of the Data Minig Project
+Second part of the Data Mining Project
 
 ## Places
 
