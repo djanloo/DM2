@@ -39,6 +39,7 @@ def ridgeline_plot(df, columns,
    
     normalized_df = get_normalized_df(df, columns)
     Nplots= len(columns)
+    print(f"Ridgeline has {Nplots} subplots")
 
     pal = sns.cubehelix_palette(Nplots,start=startcolor, rot=-.25, light=.7)
     g = sns.FacetGrid(normalized_df, row="feature", hue="feature", aspect=8, height=0.7, palette=pal)
