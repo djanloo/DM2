@@ -13,7 +13,6 @@ def get_normalized_df(df, features):
     norm_df = pd.DataFrame(columns = ["feature", "normalized_value", "true_value"])
     for feature in features:
         rescaled_values = MinMaxScaler().fit_transform(df[feature].to_numpy().reshape(-1,1)).reshape(-1)
-        print(rescaled_values.shape)
         single_feature_df = pd.DataFrame(dict(feature=[feature]*len(df), normalized_value=rescaled_values, true_value=df[feature]) )
         norm_df = pd.concat([norm_df, single_feature_df], ignore_index=True)
     return norm_df
@@ -100,5 +99,5 @@ def ridgeline_plot(df, columns,
 
     # Sets it back for other figures
     rcParams["figure.autolayout"] = True
-    
+
     return plt.gcf()
