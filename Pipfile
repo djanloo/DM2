@@ -13,6 +13,7 @@ pandas = "*"
 sklearn = "*"
 scikit-learn = "*"
 networkx = "*"
+umap-learn = "*"
 
 [dev-packages]
 ipykernel = "*"
