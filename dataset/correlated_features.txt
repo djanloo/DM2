@@ -304,14 +304,6 @@ COLUMNS STARTING WITH PREFIX skew:
 COLUMNS STARTING WITH PREFIX lag1:
 
 
-	Correlated with lag1_sum:
-lag1_mean    0.999266
-Name: lag1_sum, dtype: float64
-
-	Correlated with lag1_mean:
-lag1_sum    0.999266
-Name: lag1_mean, dtype: float64
-
 	Correlated with lag1_std:
 lag1_min      -0.951149
 lag1_max       0.952453
@@ -477,14 +469,6 @@ Name: lag1_q01_w1, dtype: float64
 	Correlated with lag1_q05_w1:
 lag1_q95_w1   -0.994144
 Name: lag1_q05_w1, dtype: float64
-
-	Correlated with lag1_q25_w1:
-lag1_q75_w1   -0.969336
-Name: lag1_q25_w1, dtype: float64
-
-	Correlated with lag1_q75_w1:
-lag1_q25_w1   -0.969336
-Name: lag1_q75_w1, dtype: float64
 
 	Correlated with lag1_q95_w1:
 lag1_q05_w1   -0.994144
