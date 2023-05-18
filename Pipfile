@@ -14,6 +14,7 @@ sklearn = "*"
 scikit-learn = "*"
 networkx = "*"
 umap-learn = "*"
+pyod = "*"
 
 [dev-packages]
 ipykernel = "*"
