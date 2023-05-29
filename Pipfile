@@ -15,6 +15,9 @@ umap-learn = "*"
 pyod = "*"
 scikit-learn = "*"
 keras = "*"
+librosa = "*"
+tqdm = "*"
+ipywidgets = "*"
 
 [dev-packages]
 ipykernel = "*"

@@ -1,6 +1,13 @@
 ###### FOR THIS PROJ
 /omit
 /dataset/*.csv
+
+# Zip files in dataset folder
+/dataset/*.zip
+
+# Audio files
+*.wav
+
 ####################
 
 
