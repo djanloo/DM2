@@ -18,6 +18,7 @@ keras = "*"
 librosa = "*"
 tqdm = "*"
 ipywidgets = "*"
+tslearn = "*"
 
 [dev-packages]
 ipykernel = "*"
