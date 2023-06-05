@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.signal import decimate, find_peaks
 import matplotlib.pyplot as plt
+from tqdm.notebook import tqdm
 
 class PhoneticTrack:
     """Basically is the mean intensity, where the mean is performed on a rolling
@@ -126,7 +127,7 @@ class SyllablesDivider:
     def get_start_points(self, phonetic_list, return_times=False):
         start_indexes = []
         start_times = []
-        for ph_tr in phonetic_list.elements:            
+        for ph_tr in tqdm(phonetic_list.elements):            
             # Get the min size and the window for the given track
             min_size = ph_tr.get_window_from_ms(self.min_size_ms)
             window = ph_tr.get_window_from_ms(self.smoothing_window_ms)
@@ -147,7 +148,6 @@ class SyllablesDivider:
             
             # Take the starting point and the end point
             # of the transition between two syllables
-            
             if self._method == "intensity_threshold":
                 start_transition, end_transition = SyllablesDivider._boolean_clusters(
                                                    derivative > self.derivative_threshold, 
@@ -155,7 +155,7 @@ class SyllablesDivider:
                                                    )
             else:
                 start_transition, end_transition = self._steepest_n_regions(derivative, min_size)
-            # Since the rolling window moves the track orward in time, I subtract half of the window
+            # Since the rolling window moves the track forward in time, I subtract half of the window
             # to take care of this effect
             start_syll = start_transition - window//2
             
