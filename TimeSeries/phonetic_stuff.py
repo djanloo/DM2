@@ -117,14 +117,21 @@ class SyllablesDivider:
         return (start_cluster[good_clusters], end_cluster[good_clusters])
    
 
-    def _steepest_n_regions(self, derivative, min_size):
+    def _steepest_n_regions(self, derivative, min_size, endpoint=True):
         u = find_peaks(derivative, width=min_size)        
         indexes_of_bests = np.argsort(u[1]["prominences"])[-(self.n_syllables):]
         best_peaks = u[0][indexes_of_bests]
         widths = u[1]["widths"][indexes_of_bests]
-        return (best_peaks - widths/2).astype(int), (best_peaks + widths/2).astype(int)
+        
+        # Sorting
+        argsort_peaks = np.argsort(best_peaks)
+        starts, ends = (best_peaks - widths/2).astype(int)[argsort_peaks],  (best_peaks + widths/2).astype(int)[argsort_peaks]
+        if endpoint:
+            starts = np.append(starts, [len(derivative)])
+            ends = np.append(ends, [len(derivative)])
+        return starts, ends
     
-    def get_start_points(self, phonetic_list, return_times=False):
+    def get_start_points(self, phonetic_list, return_times=False, endpoint=False):
         start_indexes = []
         start_times = []
         for ph_tr in tqdm(phonetic_list.elements):            
@@ -154,7 +161,7 @@ class SyllablesDivider:
                                                    min_size
                                                    )
             else:
-                start_transition, end_transition = self._steepest_n_regions(derivative, min_size)
+                start_transition, end_transition = self._steepest_n_regions(derivative, min_size, endpoint=endpoint)
             # Since the rolling window moves the track forward in time, I subtract half of the window
             # to take care of this effect
             start_syll = start_transition - window//2
@@ -163,4 +170,5 @@ class SyllablesDivider:
             start_times.append(start_syll/ph_tr.sampling_rate)
         if return_times:
             return start_indexes, start_times
+   
         return start_indexes
