@@ -19,6 +19,8 @@ librosa = "*"
 tqdm = "*"
 ipywidgets = "*"
 tslearn = "*"
+xgboost = "*"
+optuna = "*"
 
 [dev-packages]
 ipykernel = "*"
