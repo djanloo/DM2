@@ -66,7 +66,7 @@ class PhoneticList:
             
 
 class SyllablesDivider:
-    """Divides a phonetic track in syllables by threshold on intensity derivative"""
+    """Divides a phonetic track in syllables by threshold on intensity derivative or by number of syllables"""
     def __init__(self, 
                  min_size_ms=0.1, 
                  smoothing_window_ms=0.5, 
