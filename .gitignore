@@ -2,6 +2,9 @@
 /omit
 /dataset/*.csv
 
+# numpy arrays
+*.npy
+
 # Zip files in dataset folder
 /dataset/*.zip
 
