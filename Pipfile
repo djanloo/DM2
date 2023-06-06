@@ -21,6 +21,7 @@ ipywidgets = "*"
 tslearn = "*"
 xgboost = "*"
 optuna = "*"
+awkward = "*"
 
 [dev-packages]
 ipykernel = "*"
