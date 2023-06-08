@@ -22,6 +22,7 @@ tslearn = "*"
 xgboost = "*"
 optuna = "*"
 awkward = "*"
+pyts = "*"
 
 [dev-packages]
 ipykernel = "*"
