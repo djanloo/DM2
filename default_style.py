@@ -15,8 +15,10 @@ SHORT_HALFSIZE_FIGURE = (9/2.54, 6/2.54)
 
 # This must be done to put legends outside subplots
 # If you want a tight layout you must ask for it
+
+# EDIT: it is possible to set legend to the figure instead of the axis, I didn't remember that
 from matplotlib import rcParams
-rcParams["figure.autolayout"] = False
+rcParams["figure.autolayout"] = True
 
 SMALL_SIZE = 8
 MEDIUM_SIZE = 9

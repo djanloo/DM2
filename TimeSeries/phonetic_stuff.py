@@ -164,7 +164,8 @@ class SyllablesDivider:
                 start_transition, end_transition = self._steepest_n_regions(derivative, min_size, endpoint=endpoint)
             # Since the rolling window moves the track forward in time, I subtract half of the window
             # to take care of this effect
-            start_syll = start_transition - window//2
+            start_syll = start_transition - window
+            start_syll[0] = 0
             
             start_indexes.append(start_syll)
             start_times.append(start_syll/ph_tr.sampling_rate)
