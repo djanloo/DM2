@@ -3,6 +3,7 @@ import pandas as pd
 from scipy.signal import decimate, find_peaks
 import matplotlib.pyplot as plt
 from tqdm.notebook import tqdm
+from sklearn.preprocessing import MinMaxScaler
 
 class PhoneticTrack:
     """Basically is the mean intensity, where the mean is performed on a rolling
@@ -12,8 +13,17 @@ class PhoneticTrack:
         self.track = track
         self.sampling_rate = sampling_rate
         self.duration_s = len(track)/sampling_rate
-        self.time = np.linspace(0, self.duration_s, len(track))
-        self.decimation =None
+        self.decimation = None
+        self.source_track = None
+        self.sampling_rate_rescale = None
+    
+    @property
+    def time(self):
+        return np.linspace(0, self.duration_s, len(self.track))
+    
+    @property
+    def source_time(self):
+        return np.linspace(0, len(self.source_track)/self.sampling_rate/self.sampling_rate_rescale, len(self.source_track))
     
     def get_window_from_ms(self, window_in_ms):
         return int(window_in_ms*1e-3*self.sampling_rate)
@@ -31,6 +41,8 @@ class PhoneticTrack:
             sampling_rate_rescale = decimation
         new = PhoneticTrack(ph, sampling_rate/sampling_rate_rescale)
         new.decimation = decimation
+        new.source_track = track
+        new.sampling_rate_rescale = sampling_rate_rescale
         return new
 
     def get_index_in_original_audio(self, index):
@@ -43,8 +55,6 @@ class PhoneticList:
     """A list of phonetic tracks that wraps some functionalities"""
     def __init__(self):
         self.elements = []
-        self.tracks = []
-        self.times = []
     
     @classmethod
     def from_tracks(cls, tracks, sampling_rates, window_ms, decimate=None):
@@ -52,13 +62,60 @@ class PhoneticList:
         for track,sr in zip(tracks, sampling_rates):
             new = PhoneticTrack._from_single_track(track, sr, window_ms, decimate)
             obj.elements.append(new)
-            obj.tracks.append(new.track)
-            obj.times.append(new.time)
         return obj
+    
+    @property
+    def times(self):
+        return [el.time for el in self.elements]
+       
+    @property
+    def source_times(self):
+        return [el.source_time for el in self.elements]
+    
+    @property
+    def tracks(self):
+        return [el.track for el in self.elements]
+    
+    @property
+    def source_tracks(self):
+        return [el.source_track for el in self.elements]
 
     def get_indexes_in_original_audios(self, indexes):
         return [el.get_index_in_original_audio(i) for el, i in zip(self.elements, indexes)]
+    
+    def standardize_length(self, length=np.inf, time_rescale=True):
+        if time_rescale:
+            # If time rescaling is on, chooses the standard length of traces
+            std_len = min(2000, np.min([len(tr) for tr in self.tracks]))
 
+        standardised_phonetic_traces = pd.DataFrame()
+        for track in self.tracks:
+
+            # Generates the downsampling indexes
+            if time_rescale:
+                indexes = (len(track)-1)*(np.linspace(0,1,std_len))
+                indexes = indexes.astype(int)
+                time_rescale_factor = len(track)/std_len
+
+                # Check repeated values
+                indexes, counts = np.unique(indexes, return_counts=True)
+                if (counts>1).any():
+                    print("repeated index")
+            else:
+                indexes = np.arange(len(tr))
+
+            # Scales the signal here
+            phonetic_signal = MinMaxScaler().fit_transform(track[indexes].reshape(-1,1)).reshape(-1)
+            row = pd.DataFrame(
+                               [[phonetic_signal, 
+                                 time_rescale_factor]], 
+                               columns=["standard_phonetic_trace", "time_rescale"], 
+                               index=[0]
+                              )
+            standardised_phonetic_traces = pd.concat([standardised_phonetic_traces, row], ignore_index=True)
+
+        return standardised_phonetic_traces
+    
     def __len__(self):
         return len(self.elements)
     
