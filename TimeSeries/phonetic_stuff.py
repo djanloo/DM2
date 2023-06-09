@@ -1,3 +1,8 @@
+"""
+Some shorthands to do stuff with heavily downsampled short-time moving intensity time series.
+
+Author: djanloo
+"""
 import numpy as np
 import pandas as pd
 from scipy.signal import decimate, find_peaks
