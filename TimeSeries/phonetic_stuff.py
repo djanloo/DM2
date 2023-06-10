@@ -134,8 +134,8 @@ class SyllablesDivider:
                  min_size_ms=0.1, 
                  smoothing_window_ms=0.5, 
                  derivative_threshold=0.2,
-                 n_syllables=None
-                 
+                 n_syllables=None,
+                 endpoint=True
                 ):
         self.min_size_ms = min_size_ms
         self.smoothing_window_ms = smoothing_window_ms
@@ -148,6 +148,12 @@ class SyllablesDivider:
         else:
             self._method = "intensity_threshold"
             self.derivative_threshold = derivative_threshold
+            
+        self._phonetic_list = None
+        self._start_indexes = None
+        self._start_times = None
+        self._endpoint = endpoint
+        self._intensities = None
         
     @classmethod       
     def _boolean_clusters(cls, x, min_size):
@@ -191,11 +197,12 @@ class SyllablesDivider:
         if endpoint:
             starts = np.append(starts, [len(derivative)])
             ends = np.append(ends, [len(derivative)])
-        return starts, ends
+        return np.sort(starts), np.sort(ends)
     
-    def get_start_points(self, phonetic_list, return_times=False, endpoint=False):
-        start_indexes = []
-        start_times = []
+    def fit(self, phonetic_list, return_times=False):
+        self._phonetic_list = phonetic_list
+        self._start_indexes = []
+        self._start_times = []
         for ph_tr in tqdm(phonetic_list.elements):            
             # Get the min size and the window for the given track
             min_size = ph_tr.get_window_from_ms(self.min_size_ms)
@@ -223,15 +230,66 @@ class SyllablesDivider:
                                                    min_size
                                                    )
             else:
-                start_transition, end_transition = self._steepest_n_regions(derivative, min_size, endpoint=endpoint)
+                start_transition, end_transition = self._steepest_n_regions(derivative, min_size, endpoint=self._endpoint)
+            
             # Since the rolling window moves the track forward in time, I subtract half of the window
             # to take care of this effect
             start_syll = start_transition - window
             start_syll[0] = 0
             
-            start_indexes.append(start_syll)
-            start_times.append(start_syll/ph_tr.sampling_rate)
-        if return_times:
-            return start_indexes, start_times
-   
-        return start_indexes
+            self._start_indexes.append(start_syll)
+            self._start_times.append(start_syll/ph_tr.sampling_rate)
+    
+    @property
+    def start_indexes(self):
+        if self._start_indexes is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+        else:
+            return self._start_indexes
+       
+    @property
+    def start_times(self):
+        if self._start_times is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+        else:
+            return self._start_times
+    
+    @property
+    def intensities(self):
+        if self._phonetic_list is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+        
+        # If already computed, return it
+        if self._intensities is not None:
+            return self._intensities
+        
+        # Otherwise does the computation
+        else:
+            self._intensities = []
+            for i in range(len(self._phonetic_list)):
+                phtr = self._phonetic_list[i]
+
+                starts = [phtr.get_index_in_original_audio(st) for st in self._start_indexes[i][1:-1]]
+                syll_audios = np.split(phtr.source_track, starts)
+                track_intensities = np.array([np.std(fragment) for fragment in syll_audios])
+                track_intensities = 20*np.log10(track_intensities)
+                if np.isnan(track_intensities).any():
+                    print(f"Some syllable had NaN intensity\nTrack {i}\nIndexes = {starts}")
+                track_intensities[np.isnan(track_intensities)] = 0.0
+
+                self._intensities.append(track_intensities)
+                
+            self._intensities = np.array(self._intensities)
+            return self._intensities
+    
+    @property
+    def duration_ms(self):
+        if self._phonetic_list is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+            
+        start_times = np.array(self._start_times)
+        return np.diff(start_times, axis=-1)
+        
+    
+    
+            
