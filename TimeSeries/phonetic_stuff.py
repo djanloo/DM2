@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from scipy.signal import decimate, find_peaks
 import matplotlib.pyplot as plt
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 from sklearn.preprocessing import MinMaxScaler
 
 class PhoneticTrack:
@@ -155,6 +155,56 @@ class SyllablesDivider:
         self._endpoint = endpoint
         self._intensities = None
         
+    @property
+    def start_indexes(self):
+        if self._start_indexes is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+        else:
+            return self._start_indexes
+       
+    @property
+    def start_times(self):
+        if self._start_times is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+        else:
+            return self._start_times
+    
+    @property
+    def intensities(self):
+        if self._phonetic_list is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+        
+        # If already computed, return it
+        if self._intensities is not None:
+            return self._intensities
+        
+        # Otherwise does the computation
+        else:
+            self._intensities = []
+            for i in range(len(self._phonetic_list)):
+                phtr = self._phonetic_list[i]
+
+                starts = [phtr.get_index_in_original_audio(st) for st in self._start_indexes[i][1:-1]]
+                syll_audios = np.split(phtr.source_track, starts)
+                track_intensities = np.array([np.std(fragment) for fragment in syll_audios])
+                track_intensities = 20*np.log10(track_intensities)
+                if np.isnan(track_intensities).any():
+                    print(f"Some syllable had NaN intensity\nTrack {i}\nIndexes = {starts}")
+                track_intensities[np.isnan(track_intensities)] = 0.0
+
+                self._intensities.append(track_intensities)
+                
+            self._intensities = np.array(self._intensities)
+            return self._intensities
+    
+    @property
+    def duration_ms(self):
+        if self._phonetic_list is None:
+            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+            
+        start_times = np.array(self._start_times)
+        return np.diff(start_times, axis=-1)
+        
     @classmethod       
     def _boolean_clusters(cls, x, min_size):
         """Finds clusters of True inside a boolean vector.
@@ -240,56 +290,36 @@ class SyllablesDivider:
             self._start_indexes.append(start_syll)
             self._start_times.append(start_syll/ph_tr.sampling_rate)
     
-    @property
-    def start_indexes(self):
-        if self._start_indexes is None:
-            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
-        else:
-            return self._start_indexes
-       
-    @property
-    def start_times(self):
-        if self._start_times is None:
-            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
-        else:
-            return self._start_times
-    
-    @property
-    def intensities(self):
-        if self._phonetic_list is None:
-            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+    def transform(self):
+        """Returns the phonetic list of syllables"""
+        syllables_tracks = []
+        padded_syllables_tracks = []
+        # Splitting
+        for i in tqdm(range(len(self._phonetic_list))):
+            phtr = self._phonetic_list[i]
+            starts = [phtr.get_index_in_original_audio(st) for st in self._start_indexes[i][1:-1]]
+            syll_audios = np.split(phtr.source_track, starts)
+            syllables_tracks.append(syll_audios)
         
-        # If already computed, return it
-        if self._intensities is not None:
-            return self._intensities
-        
-        # Otherwise does the computation
-        else:
-            self._intensities = []
-            for i in range(len(self._phonetic_list)):
-                phtr = self._phonetic_list[i]
+        # Padding is different for each syllable
+        for sy in tqdm(range(self.n_syllables)):
 
-                starts = [phtr.get_index_in_original_audio(st) for st in self._start_indexes[i][1:-1]]
-                syll_audios = np.split(phtr.source_track, starts)
-                track_intensities = np.array([np.std(fragment) for fragment in syll_audios])
-                track_intensities = 20*np.log10(track_intensities)
-                if np.isnan(track_intensities).any():
-                    print(f"Some syllable had NaN intensity\nTrack {i}\nIndexes = {starts}")
-                track_intensities[np.isnan(track_intensities)] = 0.0
-
-                self._intensities.append(track_intensities)
-                
-            self._intensities = np.array(self._intensities)
-            return self._intensities
-    
-    @property
-    def duration_ms(self):
-        if self._phonetic_list is None:
-            raise RuntimeError("SyllablesDivider must be fitted to some phonetic list before")
+            # Finds max length of the current syllable
+            maxlen = -1
+            for i in range(len(syllables_tracks)): 
+                l = len(syllables_tracks[i][sy])
+                maxlen = l if l>maxlen else maxlen
             
-        start_times = np.array(self._start_times)
-        return np.diff(start_times, axis=-1)
-        
+            Y = np.zeros((len(syllables_tracks), maxlen))
+            for i in range(len(syllables_tracks)):
+                Y[i] = np.pad(syllables_tracks[i][sy],
+                                (0, maxlen - len(syllables_tracks[i][sy])),
+                                constant_values=(np.nan, np.nan))
+            padded_syllables_tracks.append(Y)
+        return padded_syllables_tracks
+
+
+
     
     
             
