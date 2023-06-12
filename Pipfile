@@ -23,6 +23,7 @@ xgboost = "*"
 optuna = "*"
 awkward = "*"
 pyts = "*"
+stumpy = "*"
 
 [dev-packages]
 ipykernel = "*"
