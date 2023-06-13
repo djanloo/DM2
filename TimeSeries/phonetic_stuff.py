@@ -91,8 +91,9 @@ class PhoneticList:
     def standardize_length(self, length=np.inf, time_rescale=True):
         if time_rescale:
             # If time rescaling is on, chooses the standard length of traces
-            std_len = min(2000, np.min([len(tr) for tr in self.tracks]))
-
+            std_len = min(length, np.min([len(tr) for tr in self.tracks]))
+        if std_len != length:
+            raise ValueError(f"specified length {length} is too long because smaller track is long {std_len}")
         standardised_phonetic_traces = pd.DataFrame()
         for track in self.tracks:
 
