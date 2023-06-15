@@ -99,22 +99,21 @@ class PhoneticList:
 
             # Generates the downsampling indexes
             if time_rescale:
-                indexes = (len(track)-1)*(np.linspace(0,1,std_len))
+                indexes = (len(track) - 1) * (np.linspace(0, 1, std_len))
                 indexes = indexes.astype(int)
-                time_rescale_factor = len(track)/std_len
+                time_rescale_factor = len(track) / std_len
 
                 # Check repeated values
                 indexes, counts = np.unique(indexes, return_counts=True)
-                if (counts>1).any():
+                if (counts > 1).any():
                     print("repeated index")
             else:
-                indexes = np.arange(len(tr))
+                indexes = np.arange(len(track))
 
             # Scales the signal here
-            phonetic_signal = MinMaxScaler().fit_transform(track[indexes].reshape(-1,1)).reshape(-1)
+            phonetic_signal = MinMaxScaler().fit_transform(track[indexes].reshape(-1, 1)).reshape(-1)
             row = pd.DataFrame(
-                               [[phonetic_signal, 
-                                 time_rescale_factor]], 
+                               [[phonetic_signal, time_rescale_factor]],
                                columns=["standard_phonetic_trace", "time_rescale"], 
                                index=[0]
                               )
