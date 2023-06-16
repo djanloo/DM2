@@ -38,8 +38,11 @@ class PhoneticTrack:
         return int(window_in_ms*1e-3*sampling_rate)
     
     @classmethod
-    def _from_single_track(cls, track, sampling_rate, window_ms, decimation=None):
-        ph = pd.Series(track).rolling(window=PhoneticTrack._get_window_from_ms(window_ms, sampling_rate)).std().fillna(0)
+    def _from_single_track(cls, track, sampling_rate, window_ms, decimation=None, **rolling_kwargs):
+        ph = pd.Series(track).rolling(
+                                    window=PhoneticTrack._get_window_from_ms(window_ms, sampling_rate), 
+                                    **rolling_kwargs
+                                    ).std().fillna(0)
         sampling_rate_rescale = 1
         if decimation is not None:
             ph = decimate(ph,q=decimation)
@@ -62,10 +65,10 @@ class PhoneticList:
         self.elements = []
     
     @classmethod
-    def from_tracks(cls, tracks, sampling_rates, window_ms, decimate=None):
+    def from_tracks(cls, tracks, sampling_rates, window_ms, decimate=None, **rolling_kwargs):
         obj = PhoneticList()
         for track,sr in zip(tracks, sampling_rates):
-            new = PhoneticTrack._from_single_track(track, sr, window_ms, decimate)
+            new = PhoneticTrack._from_single_track(track, sr, window_ms, decimate, **rolling_kwargs)
             obj.elements.append(new)
         return obj
     
@@ -283,9 +286,8 @@ class SyllablesDivider:
             else:
                 start_transition, end_transition = self._steepest_n_regions(derivative, min_size, endpoint=self._endpoint)
             
-            # Since the rolling window moves the track forward in time, I subtract half of the window
-            # to take care of this effect
-            start_syll = start_transition - window
+            
+            start_syll = start_transition
             start_syll[0] = 0
             
             self._start_indexes.append(start_syll)
