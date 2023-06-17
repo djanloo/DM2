@@ -24,6 +24,7 @@ optuna = "*"
 awkward = "*"
 pyts = "*"
 stumpy = "*"
+ruptures = "*"
 
 [dev-packages]
 ipykernel = "*"
