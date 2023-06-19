@@ -39,10 +39,13 @@ class PhoneticTrack:
     
     @classmethod
     def _from_single_track(cls, track, sampling_rate, window_ms, decimation=None, **rolling_kwargs):
-        ph = pd.Series(track).rolling(
-                                    window=PhoneticTrack._get_window_from_ms(window_ms, sampling_rate), 
-                                    **rolling_kwargs
-                                    ).std().fillna(0)
+        if window_ms > 0.0:
+            ph = pd.Series(track).rolling(
+                                        window=PhoneticTrack._get_window_from_ms(window_ms, sampling_rate), 
+                                        **rolling_kwargs
+                                        ).std().fillna(0)
+        else:
+            ph = pd.Series(track)
         sampling_rate_rescale = 1
         if decimation is not None:
             ph = decimate(ph,q=decimation)
@@ -95,10 +98,10 @@ class PhoneticList:
         if time_rescale:
             # If time rescaling is on, chooses the standard length of traces
             std_len = min(length, np.min([len(tr) for tr in self.tracks]))
-        if std_len != length:
+        if np.isfinite(length) and std_len != length:
             raise ValueError(f"specified length {length} is too long because smaller track is long {std_len}")
         standardised_phonetic_traces = pd.DataFrame()
-        for track in self.tracks:
+        for track_idx,track in enumerate(self.tracks):
 
             # Generates the downsampling indexes
             if time_rescale:
@@ -107,14 +110,14 @@ class PhoneticList:
                 time_rescale_factor = len(track) / std_len
 
                 # Check repeated values
-                indexes, counts = np.unique(indexes, return_counts=True)
+                indexes_unique, counts = np.unique(indexes, return_counts=True)
                 if (counts > 1).any():
-                    print("repeated index")
+                    print(f"repeated index in track {track_idx}")
             else:
                 indexes = np.arange(len(track))
 
             # Scales the signal here
-            phonetic_signal = MinMaxScaler().fit_transform(track[indexes].reshape(-1, 1)).reshape(-1)
+            phonetic_signal = MinMaxScaler().fit_transform(track.values[indexes].reshape(-1, 1)).reshape(-1)
             row = pd.DataFrame(
                                [[phonetic_signal, time_rescale_factor]],
                                columns=["standard_phonetic_trace", "time_rescale"], 
@@ -262,7 +265,7 @@ class SyllablesDivider:
             window = ph_tr.get_window_from_ms(self.smoothing_window_ms)
 
             # Rolles the phonetic trace and removes nans
-            rolled_trace = pd.Series(ph_tr.track).rolling(window=window).mean()
+            rolled_trace = pd.Series(ph_tr.track).rolling(window=window, center=True, min_periods=5).mean()
             rolled_trace = rolled_trace.fillna(rolled_trace[window+1])
 
             # Takes the derivative of the smoothed phonetic trace
