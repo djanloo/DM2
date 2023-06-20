@@ -13,6 +13,10 @@ SHORT_FULLSIZE_FIGURE = (18/2.54, 6/2.54)
 SHORT_HALFSIZE_FIGURE = (9/2.54, 6/2.54)
 BAND_FULLSIZE_FIGURE = (18/2.54, 4/2.54)
 
+# Sets the default to SHORT_HALFSIZE
+plt.rcParams["figure.figsize"] = SHORT_HALFSIZE_FIGURE
+
+
 # This must be done to put legends outside subplots
 # If you want a tight layout you must ask for it
 

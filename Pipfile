@@ -25,6 +25,8 @@ awkward = "*"
 pyts = "*"
 stumpy = "*"
 ruptures = "*"
+scikeras = "*"
+scikit-plot = "*"
 
 [dev-packages]
 ipykernel = "*"
