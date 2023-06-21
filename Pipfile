@@ -27,6 +27,7 @@ stumpy = "*"
 ruptures = "*"
 scikeras = "*"
 scikit-plot = "*"
+imblearn = "*"
 
 [dev-packages]
 ipykernel = "*"

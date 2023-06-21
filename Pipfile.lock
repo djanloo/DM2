@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "84398c4e366367185b02fff96c05ee4724bff1e16c234db76d0fb9a6d12cc148"
+            "sha256": "001919eae1e621bdbbda2c6530c8a6c36d2b4d6d2034a87f89bc51f49beabe48"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -497,6 +497,21 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==3.4"
+        },
+        "imbalanced-learn": {
+            "hashes": [
+                "sha256:7b630516696c09b2b5a5398df8db19d73db0c13fa065d2f1407a6d2037794bc6",
+                "sha256:bc7609619ec3c38c442292928239ad3d10b5deb0af8a29c83822b7b57b319f8b"
+            ],
+            "version": "==0.10.1"
+        },
+        "imblearn": {
+            "hashes": [
+                "sha256:d42c2d709d22c00d2b9a91e638d57240a8b79b4014122d92181fcd2549a2f79a",
+                "sha256:d8fbb662919c1b16f438ad91a8256220e53bcf6815c9ad5502c518b798de34f2"
+            ],
+            "index": "pypi",
+            "version": "==0.0"
         },
         "ipykernel": {
             "hashes": [
@@ -1660,7 +1675,7 @@
                 "sha256:88a4153d8505aabbb4e13aacb7c486c2b4a33ca3b3f807914a9b4c844c471c26",
                 "sha256:d91d5919357fe7f681a9f2b5b4cb2a5f1ef0a1e9f59c4d8ff0d3491e05c0ffd5"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version < '3.11'",
             "version": "==4.6.3"
         },
         "tzdata": {
