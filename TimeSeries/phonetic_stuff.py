@@ -117,7 +117,7 @@ class PhoneticList:
                 indexes = np.arange(len(track))
 
             # Scales the signal here
-            phonetic_signal = MinMaxScaler().fit_transform(track.values[indexes].reshape(-1, 1)).reshape(-1)
+            phonetic_signal = MinMaxScaler().fit_transform(track[indexes].reshape(-1, 1)).reshape(-1)
             row = pd.DataFrame(
                                [[phonetic_signal, time_rescale_factor]],
                                columns=["standard_phonetic_trace", "time_rescale"], 
