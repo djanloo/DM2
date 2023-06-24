@@ -60,7 +60,7 @@ class STFTransformer:
     def fit_transform(self, traces):
         if self.n_time_bins is None or self.n_spectral_bins is None:
             warnings.warn("time bins/spectral bins not specified, setting balanced bins")
-            self.equilibrate_n_coeff(traces)
+            self.balance_n_coeff(traces)
             
         min_trace_length = np.min([len(tr) for tr in traces])//self.n_time_bins
         
