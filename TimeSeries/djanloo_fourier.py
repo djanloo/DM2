@@ -122,4 +122,4 @@ class STFTransformer:
         self.spectral_mode = np.array(self.spectral_centroid)
         self.STFT = np.array(self.STFT)
         
-        return self.STFT
+        return self.STFT, self.spectral_centroid
