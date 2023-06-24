@@ -21,7 +21,7 @@ class STFTransformer:
         print(f"Time bins = {self.n_time_bins}, Spectral bins = {self.n_spectral_bins}")
         lengths = [len(tr) for tr in traces]
         
-        print(f"min length of trace is roughly {np.min(lengths)//self.n_time_bins}")
+        print(f"min length of window is roughly {np.min(lengths)//self.n_time_bins}")
         print(f"max number of Fourier coeffs is {np.min(lengths)//2//self.n_time_bins}")
         
     
@@ -29,7 +29,7 @@ class STFTransformer:
     def _bin_spectral_energy(cls, spectrum_energy, n_bins, max_freq, sampling_rate=48_000/8, plot_check=False):
         """bins spectral energy and get rid of variable number of spectral points due to different length of samples"""
         if len(spectrum_energy) < n_bins:
-            raise ValueError(f"too few frequencies to bin (spectrum has {len(spectrum_energy)})")
+            raise ValueError(f"More bins than frequencies (bins are {n_bins}, spectrum has length {len(spectrum_energy)})")
 
         T = 1.0/sampling_rate
 
@@ -97,11 +97,15 @@ class STFTransformer:
                 window_spectrum = np.abs(fft(regularized_window)[:winlen//2])**2
 
                 # Saves the binned STFT
-                STFT[i, :] = np.log(STFTransformer._bin_spectral_energy(window_spectrum, 
-                                                                         self.n_spectral_bins, 
-                                                                         3000,
-                                                                         sampling_rate=self.sampling_rate)
-                                   )
+                try:
+                    STFT[i, :] = np.log(STFTransformer._bin_spectral_energy(window_spectrum, 
+                                                                             self.n_spectral_bins, 
+                                                                             3000,
+                                                                             sampling_rate=self.sampling_rate)
+                                       )
+                except ValueError as e:
+                    raise ValueError(f"Error in track {tr_indx}, that has window length equal to {winlen}") from e
+                    
 
                 # Gets distribution
                 energy_density = window_spectrum/np.sum(window_spectrum)
