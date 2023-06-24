@@ -105,6 +105,8 @@ class STFTransformer:
 
                 # Gets distribution
                 energy_density = window_spectrum/np.sum(window_spectrum)
+                if np.isnan(energy_density).any():
+                    raise ValueError("energy density is not normalisable")
 
                 # Gets weighted mean
                 STFT_CENTROID[i] = np.sum(energy_density*FF)
