@@ -51,7 +51,8 @@ class STFTransformer:
     
     def balance_n_coeff(self, traces):
         """Decides the number of time and spectral bins to have square stft"""
-        min_trace_length = np.min([len(_) for _ in traces])
+        min_trace_length = np.min([np.sum(~np.isnan(_)) for _ in traces])
+        print(f"shortest trace has length {min_trace_length}")
         N = int(np.floor(np.sqrt(min_trace_length/2)))
         
         self.n_time_bins = N
