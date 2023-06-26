@@ -28,6 +28,7 @@ ruptures = "*"
 scikeras = "*"
 scikit-plot = "*"
 imblearn = "*"
+notebook = "*"
 
 [dev-packages]
 ipykernel = "*"
