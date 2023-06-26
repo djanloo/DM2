@@ -5,6 +5,9 @@
 # numpy arrays
 *.npy
 
+# Except the ones fro STFTs because Paolino cannot reproduce outputs
+!syllables_02*
+
 # Zip files in dataset folder
 /dataset/*.zip
 
