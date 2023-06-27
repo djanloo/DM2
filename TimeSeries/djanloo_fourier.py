@@ -2,6 +2,7 @@ from scipy.fft import fft, fftfreq
 import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+from pyts.approximation import DiscreteFourierTransform
 
 import warnings
 
@@ -58,10 +59,32 @@ class STFTransformer:
         self.n_time_bins = N
         self.n_spectral_bins = N
         
+    def pad_traces(self, traces):
+        """If too much spectral bins are requested, augments the traces adding zeros
+        to make each track at least L = 2*n_spectral_bins long.
+        """
+        L = 2*self.n_spectral_bins
+        padded_traces = []
+        for tr in traces:
+            padded_trace = []
+            signal = tr[~np.isnan(tr)]
+            windows = np.array_split(signal, self.n_time_bins)
+            for window in windows:
+                missing = L - len(window)
+                if missing > 0:
+                    padded_window = np.pad(window, (0, missing), 'constant', constant_values=(0.0, 0.0))
+                else:
+                    padded_window = window
+                padded_trace.append(padded_window)
+            padded_traces.append(np.hstack(padded_trace))
+        return padded_traces
+    
     def fit_transform(self, traces):
         if self.n_time_bins is None or self.n_spectral_bins is None:
             warnings.warn("time bins/spectral bins not specified, setting balanced bins")
             self.balance_n_coeff(traces)
+            
+        
             
         min_trace_length = np.min([len(tr) for tr in traces])//self.n_time_bins
         
@@ -130,3 +153,48 @@ class STFTransformer:
         self.STFT = np.array(self.STFT)
         
         return self.STFT, self.spectral_centroid
+
+# class FunkySTFT(STFTransformer):
+    
+#     def __init__(self, **kwargs):
+#         return super().__init__(**kwargs)
+    
+#     @classmethod
+#     def _bin_spectral_energy(cls, *args, **kwargs):
+#         raise NotImplementedError("Funky version does not have to bin anything.")
+        
+#     def balance_n_coeff(self, traces):
+#         raise NotImplementedError("boh")
+        
+#     def fit_transform(self, traces):
+        
+#         if self.n_time_bins is None or self.n_spectral_bins is None:
+#             warnings.warn("time bins/spectral bins not specified, setting balanced bins")
+#             self.balance_n_coeff(traces)
+            
+#         # This is the list of all windows of all traces
+#         global_windows = []
+        
+#         for tr_indx, tr in tqdm(enumerate(traces), total=len(traces)):
+
+#             # Achtung! Here NaNs are necessary 
+#             #signal = tr[~np.isnan(tr)]
+#             signal = tr
+#             signal[np.isnan(signal)] = 0.0
+
+#             # Divides in windows and adds them to the gigalist
+#             global_windows += np.array_split(signal, self.n_time_bins)
+
+#         transf = DiscreteFourierTransformer()
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
