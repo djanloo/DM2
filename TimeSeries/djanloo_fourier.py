@@ -3,18 +3,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from pyts.approximation import DiscreteFourierTransform
+from scipy.interpolate import PchipInterpolator
 
 import warnings
 
 class STFTransformer:
     
-    def __init__(self, n_time_bins=None, n_spectral_bins=None, max_frequency=3000, sampling_rate=48_000/8):
+    def __init__(self, n_time_bins=None, n_spectral_bins=None, 
+                         max_frequency=3000, sampling_rate=48_000/8, 
+                         enhancing_method=None):
         self.name = "STFTransformer"
         self.n_time_bins = n_time_bins
         self.n_spectral_bins = n_spectral_bins
         self.max_frequency = max_frequency
         self.sampling_rate = sampling_rate
-    
+        
+        self.allow_window_padding = False
+        
+        self.allow_spectral_interpolation = False
+        self.freqs=None
+        if enhancing_method == "pad":
+            self.allow_window_padding = True
+            
+        elif enhancing_method == "interpolate_spectrum":
+            self.allow_spectral_interpolation = True
     
     def report(self, traces):
         assert self.n_time_bins is not None, "number of time bins not defined"
@@ -59,13 +71,13 @@ class STFTransformer:
         self.n_time_bins = N
         self.n_spectral_bins = N
         
-    def pad_traces(self, traces):
+    def _pad_windows(self, traces):
         """If too much spectral bins are requested, augments the traces adding zeros
         to make each track at least L = 2*n_spectral_bins long.
         """
         L = 2*self.n_spectral_bins
         padded_traces = []
-        for tr in traces:
+        for tr in tqdm(traces, desc="Padding traces..."):
             padded_trace = []
             signal = tr[~np.isnan(tr)]
             windows = np.array_split(signal, self.n_time_bins)
@@ -79,24 +91,40 @@ class STFTransformer:
             padded_traces.append(np.hstack(padded_trace))
         return padded_traces
     
+    def _prepare_spectral_interpolation(self):
+        # Initializes the maximally dense frequencies allowed
+        self.spectrum_length = max(self.max_window_length//2, self.n_spectral_bins)
+        print(f"spectrum length set to { self.max_window_length//2}")
+        self.freqs = np.linspace(0, self.max_frequency, self.spectrum_length)
+        
+    def _interpolate_spectral_energy(self, frequencies, spectral_energy):      
+        return  PchipInterpolator(frequencies, spectral_energy)(self.freqs)
+        
     def fit_transform(self, traces):
         if self.n_time_bins is None or self.n_spectral_bins is None:
             warnings.warn("time bins/spectral bins not specified, setting balanced bins")
             self.balance_n_coeff(traces)
+            warnings.warn(f"time bins: {self.n_time_bins},  spectral_bins={self.n_spectral_bins}")
             
-        
-            
-        min_trace_length = np.min([len(tr) for tr in traces])//self.n_time_bins
-        
-        if min_trace_length//2 < self.n_spectral_bins:
-            warnings.warn(f"Number of fourier is max {min_trace_length//2}")
-        
+        self.min_window_length = np.min([np.sum(~np.isnan(tr))//self.n_time_bins for tr in traces])
+        self.max_window_length = np.max([np.sum(~np.isnan(tr))//self.n_time_bins for tr in traces])
+
+        print("estimated max fourier  bins:", self.min_window_length//2)
+        if self.min_window_length//2 < self.n_spectral_bins:
+            warnings.warn(f"Number of fourier is max {self.min_window_length//2}.")
+            if  self.allow_window_padding:
+                warnings.warn("Activating window padding.")
+                traces = self._pad_windows(traces)
+            elif self.allow_spectral_interpolation:
+                self._prepare_spectral_interpolation()
+            else:
+                raise ValueError("enhancing method must be specified if the requested number of bins is more than maximum value.")
         
         self.spectral_centroid = []
         self.spectral_mode = []
         self.STFT = []
         
-        for tr_indx, tr in tqdm(enumerate(traces), total=len(traces)):
+        for tr_indx, tr in tqdm(enumerate(traces), total=len(traces), desc="Transforming..."):
 
             # Removes Nans
             signal = tr[~np.isnan(tr)]
@@ -108,7 +136,7 @@ class STFTransformer:
             windows = np.array_split(signal, self.n_time_bins)
             winlen = np.min([len(w) for w in windows])
 
-            # Prepares cpntainers for STFT and gets the right frequencies
+            # Prepares containers for STFT and gets the right frequencies
             STFT = np.zeros((self.n_time_bins, self.n_spectral_bins))
             FF = fftfreq(winlen, T)[:winlen//2]
             
@@ -117,8 +145,11 @@ class STFTransformer:
             STFT_MODE = np.zeros(self.n_time_bins)
             
             for i, part in enumerate(windows):
-                regularized_window = np.hamming(len(part))*part
+                regularized_window = np.hanning(len(part))*part
                 window_spectrum = np.abs(fft(regularized_window)[:winlen//2])**2
+                
+                if self.allow_spectral_interpolation:
+                    window_spectrum = self._interpolate_spectral_energy(FF, window_spectrum)
 
                 # Saves the binned STFT
                 try:
@@ -137,10 +168,14 @@ class STFTransformer:
                     raise ValueError("energy density is not normalisable")
 
                 # Gets weighted mean
-                STFT_CENTROID[i] = np.sum(energy_density*FF)
+                if self.allow_spectral_interpolation:
+                    STFT_CENTROID[i] = np.sum(energy_density*self.freqs)
+                    STFT_MODE[i] = self.freqs[np.argmax(energy_density)]
 
-                # Gets argmax (i.e. the mode)
-                STFT_MODE[i] = FF[np.argmax(energy_density)]
+                else:
+                    STFT_CENTROID[i] = np.sum(energy_density*FF)
+                    STFT_MODE[i] = FF[np.argmax(energy_density)]
+                
 
             self.spectral_centroid.append(STFT_CENTROID)
             self.spectral_mode.append(STFT_MODE)
@@ -186,10 +221,26 @@ class STFTransformer:
 #             global_windows += np.array_split(signal, self.n_time_bins)
 
 #         transf = DiscreteFourierTransformer()
-         
+
+from scipy.signal import stft
+
+class FixedResolutionSTFTransformer:
+    
+    def __init__(self, n_spectral_points=100):
+        self.n_spectral_points = n_spectral_points
+   
+    def transform(self, traces):
         
-        
-        
+        transformed_traces = []
+ 
+        for tr in tqdm(traces):
+            
+            signal = tr[~np.isnan(tr)]
+            
+            f, t, STFT = stft(signal, nperseg=2*self.n_spectral_points - 1)
+            transformed_traces.append(np.log(np.abs(STFT.T)))
+        return transformed_traces
+       
         
         
         
