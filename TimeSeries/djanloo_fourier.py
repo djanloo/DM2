@@ -5,6 +5,7 @@ from tqdm import tqdm
 from pyts.approximation import DiscreteFourierTransform
 from scipy.interpolate import PchipInterpolator
 
+import sys
 import warnings
 
 class STFTransformer:
@@ -226,9 +227,26 @@ from scipy.signal import stft
 
 class FixedResolutionSTFTransformer:
     
-    def __init__(self, n_spectral_points=100):
+    def __init__(self, 
+                 n_spectral_points=100,
+                 pad_spectra=False
+                ):
+        
         self.n_spectral_points = n_spectral_points
-   
+        self.pad_spectra = pad_spectra
+        
+    def _pad_spectra(self, list_of_spectra):        
+        longer_length = np.max([len(_) for _ in list_of_spectra])
+        padded_spectra = np.zeros((len(list_of_spectra), 
+                                   longer_length, 
+                                   self.n_spectral_points))
+        
+        for i in range(len(list_of_spectra)):
+            M = len(list_of_spectra[i])
+            padded_spectra[i,:M, :] = list_of_spectra[i]
+            
+        return padded_spectra
+        
     def transform(self, traces):
         
         transformed_traces = []
@@ -239,8 +257,11 @@ class FixedResolutionSTFTransformer:
             
             f, t, STFT = stft(signal, nperseg=2*self.n_spectral_points - 1)
             transformed_traces.append(np.log(np.abs(STFT.T)))
-        return transformed_traces
-       
+            
+        if self.pad_spectra:
+            return self._pad_spectra(transformed_traces)
+        else:
+            return transformed_traces
         
         
         
