@@ -229,11 +229,13 @@ class FixedResolutionSTFTransformer:
     
     def __init__(self, 
                  n_spectral_points=100,
-                 pad_spectra=False
+                 pad_spectra=False,
+                 verbose=True
                 ):
         
         self.n_spectral_points = n_spectral_points
         self.pad_spectra = pad_spectra
+        self.verbose = verbose
         
     def _pad_spectra(self, list_of_spectra):        
         longer_length = np.max([len(_) for _ in list_of_spectra])
@@ -250,13 +252,18 @@ class FixedResolutionSTFTransformer:
     def transform(self, traces):
         
         transformed_traces = []
- 
-        for tr in tqdm(traces):
+        
+        iterable = tqdm(traces) if self.verbose else traces
+        
+        for tr in iterable:
             
             signal = tr[~np.isnan(tr)]
             
             f, t, STFT = stft(signal, nperseg=2*self.n_spectral_points - 1)
-            transformed_traces.append(np.log(np.abs(STFT.T)))
+            STFT[STFT < 1e-16] = 1e-16
+            log_stft = np.log(np.abs(STFT.T))
+            transformed_traces.append(log_stft)
+            
             
         if self.pad_spectra:
             return self._pad_spectra(transformed_traces)
