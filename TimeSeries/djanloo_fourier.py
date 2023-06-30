@@ -260,7 +260,7 @@ class FixedResolutionSTFTransformer:
             signal = tr[~np.isnan(tr)]
             
             f, t, STFT = stft(signal, nperseg=2*self.n_spectral_points - 1)
-            STFT[STFT < 1e-16] = 1e-16
+            STFT[np.abs(STFT) < 1e-16] = 1e-16
             log_stft = np.log(np.abs(STFT.T))
             transformed_traces.append(log_stft)
             
