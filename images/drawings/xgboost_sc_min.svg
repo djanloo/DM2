@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg182"
+   width="12.5cm"
+   height="4.5cm"
+   viewBox="0 0 472.44095 170.07873"
+   sodipodi:docname="xgboost_sc_min.svg"
+   inkscape:version="1.2.2 (1:1.2.2+202305151914+b0a8486541)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs186">
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect886"
+       is_visible="true"
+       lpeversion="1"
+       unit="pc"
+       mark_distance="27.7"
+       mark_length="10"
+       minor_mark_length="4"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect886-7"
+       is_visible="true"
+       lpeversion="1"
+       unit="pc"
+       mark_distance="18.4"
+       mark_length="10"
+       minor_mark_length="4"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect886-1"
+       is_visible="true"
+       lpeversion="1"
+       unit="pc"
+       mark_distance="32.9"
+       mark_length="10"
+       minor_mark_length="4"
+       major_mark_steps="5"
+       shift="2"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect886-9"
+       is_visible="true"
+       lpeversion="1"
+       unit="pc"
+       mark_distance="22.1"
+       mark_length="10"
+       minor_mark_length="4"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview184"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="1.2908665"
+     inkscape:cx="262.22695"
+     inkscape:cy="55.38915"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g190"
+     inkscape:document-units="cm">
+    <inkscape:page
+       x="0"
+       y="0"
+       id="page188"
+       width="472.44095"
+       height="170.07874" />
+  </sodipodi:namedview>
+  <g
+     id="g190"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 1"
+     transform="matrix(1.3333333,0,0,1.3333333,0,6.167979e-6)">
+    <g
+       id="g1464"
+       transform="translate(-50.166901,54.280516)">
+      <g
+         id="g417-0"
+         transform="translate(-143.54405,-56.763129)">
+        <path
+           id="rect1620"
+           style="fill:#9a9996;fill-rule:evenodd;stroke:#77767b;stroke-width:1.19542;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           d="m 300.78405,13.617 h 57.62392 c 1.45425,0 2.625,1.301334 2.625,2.917789 v 8.418421 c 0,1.616455 -1.17075,2.917789 -2.625,2.917789 h -57.62392 c -1.45425,0 -2.625,-1.301334 -2.625,-2.917789 v -8.418421 c 0,-1.616455 1.17075,-2.917789 2.625,-2.917789 z" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:monospace;-inkscape-font-specification:monospace;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text224-7"
+           x="313.33624"
+           y="23.196148"><tspan
+             x="313.33624"
+             y="23.196148"
+             sodipodi:role="line"
+             id="tspan222-5">gbtree</tspan></text>
+      </g>
+      <g
+         id="g417-0-2"
+         transform="translate(-35.457561,-60.958086)"
+         style="fill:#ffa348;stroke:#ff7800">
+        <path
+           id="rect1620-2"
+           style="fill:#ffa348;fill-rule:evenodd;stroke:#ff7800;stroke-width:1.19542;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           d="m 267.66223,17.811957 h 57.62392 c 1.45425,0 2.625,1.301334 2.625,2.917789 v 8.418421 c 0,1.616455 -1.17075,2.917789 -2.625,2.917789 h -57.62392 c -1.45425,0 -2.625,-1.301334 -2.625,-2.917789 v -8.418421 c 0,-1.616455 1.17075,-2.917789 2.625,-2.917789 z" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+         x="261.18802"
+         y="-32.663906"
+         id="text2275"><tspan
+           sodipodi:role="line"
+           id="tspan2273"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.75"
+           x="261.18802"
+           y="-32.663906">dart</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:9px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';font-variant-ligatures:none;text-align:end;text-anchor:end;stroke-width:0.75"
+       x="93.135063"
+       y="22.621872"
+       id="text695"><tspan
+         sodipodi:role="line"
+         id="tspan693"
+         style="text-align:end;text-anchor:end;stroke-width:0.75"
+         x="93.135063"
+         y="22.621872">BOOSTER</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:9px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';font-variant-ligatures:none;text-align:end;text-anchor:end;stroke-width:0.75"
+       x="93.135063"
+       y="43.683167"
+       id="text695-9"><tspan
+         sodipodi:role="line"
+         id="tspan693-2"
+         style="text-align:end;text-anchor:end;stroke-width:0.75"
+         x="93.135063"
+         y="43.683167">GAMMA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:9px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';font-variant-ligatures:none;text-align:end;text-anchor:end;stroke-width:0.75"
+       x="93.135063"
+       y="64.636459"
+       id="text695-2"><tspan
+         sodipodi:role="line"
+         id="tspan693-8"
+         style="text-align:end;text-anchor:end;stroke-width:0.75"
+         x="93.135063"
+         y="64.636459">MAX DEPTH</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:9px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';font-variant-ligatures:none;text-align:end;text-anchor:end;stroke-width:0.75"
+       x="93.135063"
+       y="85.589752"
+       id="text695-97"><tspan
+         sodipodi:role="line"
+         id="tspan693-3"
+         style="text-align:end;text-anchor:end;stroke-width:0.75"
+         x="93.135063"
+         y="85.589752">MIN CHILD WEIGHT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:9px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';font-variant-ligatures:none;text-align:end;text-anchor:end;stroke-width:0.75"
+       x="93.135063"
+       y="106.65105"
+       id="text695-6"><tspan
+         sodipodi:role="line"
+         id="tspan693-1"
+         style="text-align:end;text-anchor:end;stroke-width:0.75"
+         x="93.135063"
+         y="106.65105">SUBSAMPLE</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 100.86762,39.698922 h 233.84951 m -233.84951,0 v -4.233333 m 9.35567,4.233333 v -1.693333 m 9.35566,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35566,1.693333 v -4.233333 m 9.35567,4.233333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35566,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35567,1.693333 v -4.233333 m 9.35566,4.233333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35566,1.693333 v -1.693333 m 9.35567,1.693333 v -4.233333 m 9.35567,4.233333 v -1.693333 m 9.35566,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35566,1.693333 v -4.233333 m 9.35567,4.233333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.35566,1.693333 v -1.693333 m 9.35567,1.693333 v -1.693333 m 9.31351,1.693333 v -4.233333"
+       id="path884-66"
+       inkscape:path-effect="#path-effect886-9"
+       inkscape:original-d="M 100.86762,39.698922 H 334.71713" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="102.28616"
+       y="50.019585"
+       id="text890-4"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan888-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="102.28616"
+         y="50.019585">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="337.66946"
+       y="49.958714"
+       id="text944-5"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan942-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="337.66946"
+         y="49.958714">5</tspan></text>
+    <path
+       d="m 112.60209,39.698922 c 0,1.238 -1.05413,2.242 -2.355,2.242 -1.29982,0 -2.35395,-1.004 -2.35395,-2.242 0,-1.238 1.05413,-2.242 2.35395,-2.242 1.30087,0 2.355,1.004 2.355,2.242 z"
+       style="fill:#ffa348;fill-opacity:1;fill-rule:evenodd;stroke:#ff7800;stroke-width:0.784125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path240-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 100.81508,61.333712 h 233.84951 m -233.84951,0 v -1.693333 m 13.92767,1.693333 v -1.693333 m 13.92766,1.693333 v -4.233333 m 13.92767,4.233333 v -1.693333 m 13.92767,1.693333 v -1.693333 m 13.92766,1.693333 v -1.693333 m 13.92767,1.693333 v -1.693333 m 13.92767,1.693333 v -4.233333 m 13.92766,4.233333 v -1.693333 m 13.92767,1.693333 v -1.693333 m 13.92767,1.693333 v -1.693333 m 13.92766,1.693333 v -1.693333 m 13.92767,1.693333 v -4.233333 m 13.92767,4.233333 v -1.693333 m 13.92766,1.693333 v -1.693333 m 13.92767,1.693333 v -1.693333 m 13.92767,1.693333 v -1.693333 m -222.84267,1.693333 v -4.233333 m 233.84951,4.233333 v -4.233333"
+       id="path884-9"
+       inkscape:path-effect="#path-effect886-1"
+       inkscape:original-d="M 100.81508,61.333712 H 334.66459" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="102.30058"
+       y="71.436935"
+       id="text890-2"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan888-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="102.30058"
+         y="71.436935">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="337.61383"
+       y="71.376068"
+       id="text944-6"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan942-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="337.61383"
+         y="71.376068">20</tspan></text>
+    <path
+       d="m 241.06955,61.333712 c 0,1.238 -1.05413,2.242 -2.355,2.242 -1.29982,0 -2.35395,-1.004 -2.35395,-2.242 0,-1.238 1.05413,-2.242 2.35395,-2.242 1.30087,0 2.355,1.004 2.355,2.242 z"
+       style="fill:#ffa348;fill-opacity:1;fill-rule:evenodd;stroke:#ff7800;stroke-width:0.784125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path240-6-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 100.81508,82.968501 h 233.84951 m -233.84951,0 v -4.233333 m 11.72633,4.233333 v -1.693333 m 11.72634,1.693333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72634,1.693333 v -4.233333 m 11.72633,4.233333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72634,1.693333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72633,1.693333 v -4.233333 m 11.72634,4.233333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72634,1.693333 v -1.693333 m 11.72633,1.693333 v -4.233333 m 11.72633,4.233333 v -1.693333 m 11.72634,1.693333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.72633,1.693333 v -1.693333 m 11.04918,1.693333 v -4.233333"
+       id="path884"
+       inkscape:path-effect="#path-effect886"
+       inkscape:original-d="M 100.81508,82.968501 H 334.66459" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="102.23565"
+       y="92.854279"
+       id="text890"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan888"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="102.23565"
+         y="92.854279">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="337.69275"
+       y="92.793411"
+       id="text944"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan942"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="337.69275"
+         y="92.793411">3</tspan></text>
+    <path
+       d="m 118.07955,82.968501 c 0,1.238 -1.05413,2.242 -2.355,2.242 -1.29982,0 -2.35395,-1.004 -2.35395,-2.242 0,-1.238 1.05413,-2.242 2.35395,-2.242 1.30087,0 2.355,1.004 2.355,2.242 z"
+       style="fill:#ffa348;fill-opacity:1;fill-rule:evenodd;stroke:#ff7800;stroke-width:0.784125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path240-6-7-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 100.81508,104.5418 h 233.84951 m -233.84951,0 v -4.23333 m 7.78933,4.23333 v -1.69333 m 7.78934,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78934,1.69333 v -4.23333 m 7.78933,4.23333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78934,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78933,1.69333 v -4.23333 m 7.78934,4.23333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78934,1.69333 v -1.69333 m 7.78933,1.69333 v -4.23333 m 7.78933,4.23333 v -1.69333 m 7.78934,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78934,1.69333 v -4.23333 m 7.78933,4.23333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78934,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78933,1.69333 v -4.23333 m 7.78934,4.23333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78933,1.69333 v -1.69333 m 7.78934,1.69333 v -1.69333 m 7.78933,1.69333 v -4.23333 m 0.16951,4.23333 v -4.23333"
+       id="path884-6"
+       inkscape:path-effect="#path-effect886-7"
+       inkscape:original-d="M 100.81508,104.5418 H 334.66459" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="105.39471"
+       y="114.21076"
+       id="text890-8"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan888-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="105.39471"
+         y="114.21076">0.4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+       x="337.62784"
+       y="114.14989"
+       id="text944-4"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';stroke-width:0.75"
+         x="337.62784"
+         y="114.14989"
+         id="tspan1311">1</tspan></text>
+    <path
+       d="m 149.17776,104.39511 c 0,1.238 -1.05413,2.242 -2.355,2.242 -1.29981,0 -2.35395,-1.004 -2.35395,-2.242 0,-1.238 1.05414,-2.242 2.35395,-2.242 1.30087,0 2.355,1.004 2.355,2.242 z"
+       style="fill:#ffa348;fill-opacity:1;fill-rule:evenodd;stroke:#ff7800;stroke-width:0.784125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path240-6-7-7-7" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#ff7800;stroke-width:0.75"
+       x="117.65333"
+       y="50.462029"
+       id="text2279"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan2277"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#ff7800;stroke-width:0.75"
+         x="117.65333"
+         y="50.462029">0.018</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#ff7800;stroke-width:0.75"
+       x="241.33466"
+       y="73.336807"
+       id="text2279-0"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan2277-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#ff7800;stroke-width:0.75"
+         x="241.33466"
+         y="73.336807">13</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#ff7800;stroke-width:0.75"
+       x="116.90891"
+       y="92.800827"
+       id="text2279-0-1"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan2277-6-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#ff7800;stroke-width:0.75"
+         x="116.90891"
+         y="92.800827">1.11</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90954px;line-height:1.25;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#ff7800;stroke-width:0.75"
+       x="148.34511"
+       y="114.21076"
+       id="text2279-0-1-9"
+       transform="scale(0.98994944,1.0101526)"><tspan
+         sodipodi:role="line"
+         id="tspan2277-6-5-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#ff7800;stroke-width:0.75"
+         x="148.34511"
+         y="114.21076">0.52</tspan></text>
+  </g>
+</svg>
